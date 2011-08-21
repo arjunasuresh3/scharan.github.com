@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>{{ page.title }}</title>
+   <meta name="author" content="Tom Preston-Werner" />
+   <link href="http://feeds.feedburner.com/tom-preston-werner" rel="alternate" title="Tom Preston-Werner" type="application/atom+xml" />
+
+   <!-- syntax highlighting CSS -->
+   <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+
+   <!-- Homepage CSS -->
+   <link rel="stylesheet" href="/css/munich.css" type="text/css" media="screen, projection" />
+
+   <!-- Start: Sai Charan's customizations -->
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+   <script type="text/javascript" src="https://raw.github.com/scharan/munich/master/customize-disqus.js"> </script>
+   <link rel="stylesheet" type="text/css" href="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css" />
+   <link rel="stylesheet" type="text/css" href="http://google-code-prettify.googlecode.com/svn/trunk/styles/sons-of-obsidian.css" />   
+   <script type="text/javascript" language="javascript" src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
+   <script type="text/javascript" language="javascript" src="http://google-code-prettify.googlecode.com/svn/trunk/src/lang-css.js"></script>
+   <script type="text/javascript" src="https://raw.github.com/scharan/munich/master/prettify-adapter.js"> </script>
+   <!-- End: Sai Charan's customizations -->
+
+</head>
+<body>
+
+  <div id="wrapper">
+    <div id="top">
+      <div id="header">
+        <h1><a href="/">{{ site.title }}</a></h1>
+        <div>{{ site.tagline }} </div>
+      </div>
+
+      <ul id="nav">
+	<li><a href="/">Home</a></li>
+	{% for page in site.pages %}
+	{% if page.title %}
+           <li><a href="{{ page.id }}">{{ page.title }}</a></li>
+	{% endif %}
+	{% endfor %}
+        <li><a href="/atom.xml">RSS</a></li>
+      </ul>
+      <ul id="nav" style="margin-top: 0px">  </ul>
+      <br class="clear">
+	
+    </div>
+
+    <div id="main">
+      {{ content }}
+
+      {% if paginator.page %}
+      <div id="pagenav">
+	<div class="inner">
+	  {% if paginator.previous_page > 1  %}
+	  <a id="older" href="/page{{ paginator.previous_page }}">&larr; &nbsp;Wander back</a>
+	  {% else if pagingator.previous_page ==1 %}
+	  <a id="older" href="/">&larr; &nbsp;Wander back</a>
+	  {% endif %}
+	  <span id="pages">Page {{paginator.page}} of {{paginator.total_pages}}</span>
+	  {% if paginator.next_page  %}
+	  <a id="newer" href="/page{{ paginator.next_page }}">Go forth &rarr; &nbsp;</a>
+	  {% endif %}
+	</div>
+      </div>
+      {% else %}
+      <div id="pagenav">
+	<div class="inner">
+	  {% if page.previous.url  %}
+	  <a id="older" href="{{ page.previous.url }}">&larr;&nbsp; Wander back</a>
+	  {% endif %}
+	  <span id="pages"> <a href="{{page.id}}" class="source a"> Permalink </a> </span>
+	  {% if page.next.url  %}
+	  <a id="newer" href="{{ page.next.url }}">Go forth &rarr;&nbsp;</a>
+	  {% endif %}
+	</div>
+      </div>
+      {% endif %}
+
+    </div>
+    
+    <br class="clear">
+    
+    <div id="bottom">
+      <!-- Please do not remove the credit attribution here. Feel free to modify the rest of theme as you wish, however. -->Original <b>design</b> for Tumblr crafted by <a href="http://www.prshnth.com">Prashanth Kamalakanthan</a>.<br />
+      Adapted for <a href="www.tumblr.com">Tumblr</a> & <a href="http://jekyllrb.com">Jekyll</a> by <a href="http://scharan.tumblr.com/about"><b>Sai Charan</b></a>. Customized theme available on <a href="https://github.com/scharan/munich" target="_blank"><b>Github</b></a>. 
+    </div>
+
+</body>
+</html>

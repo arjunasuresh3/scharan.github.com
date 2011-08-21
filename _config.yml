@@ -1,0 +1,14 @@
+markdown: rdiscount
+paginate: 5
+
+# Need this hack to work with the wordpressdotcom.rb imported
+# WP posts.
+textile_ext: html, textile
+
+domain: aws.saicharan.in
+email: me@saicharan.in
+title: Sai Charan
+tagline: A Celebration called Life!
+
+disqus:
+  name: scharan

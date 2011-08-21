@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="post text">
+  <span class="icon"><a href="{{ page.id }}">{{ page.title }}</a></span>
+  <span class="meta">
+    <a href="{{ page.id }}" class="timestamp">{{ page.date | date: '%d %b'}}</a>
+    <a href="{{ page.id }}#disqus_thread" class="count">Comments</a>
+  </span>
+  <span class="ttl"><a href="{{ page.id }}">{{ page.title }}</a></span>
+  <div class="body">
+    {{ content }}
+  </div>
+</div>
+
+{% if site.disqus %}
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_identifier = "{{ page.url }}";
+  (function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = 'http://{{ site.disqus.name }}.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={{ site.disqus.id }}">comments powered by Disqus.</a></noscript>
+{% endif %}
