@@ -4,7 +4,11 @@ layout: post
 title: Ubuntu sshd
 wordpress_url: http://saicharan.in/blog/?p=105
 ---
-`#sudo apt-get install openssh-server`
+
+
+ <code>#sudo apt-get install openssh-server</code>
+
+
 Done! Simple as that.
 
 Ref: <a href="http://www.cyberciti.biz/tips/howot-install-ubuntu-linux-ssh-server.html" target="_blank">http://www.cyberciti.biz/tips/howot-install-ubuntu-linux-ssh-server.html</a>

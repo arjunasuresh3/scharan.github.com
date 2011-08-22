@@ -3,7 +3,9 @@ require 'date'
 require 'yaml'
 require 'rexml/document'
 require 'rubygems'
+require 'hpricot'
 require 'reverse_markdown'
+require 'downmarkit'
 include REXML
 
 doc = Document.new File.new(ARGV[0])
@@ -18,8 +20,11 @@ doc.elements.each("rss/channel/item[wp:status = 'publish' and wp:post_type = 'po
 
     content = post['content:encoded'].text
 
-    content = content.gsub(/<code>(.*?)<\/code>/, '`\1`')
+    #content = DownmarkIt.to_markdown(content)
+
+    #content = content.gsub(/<code>(.*?)<\/code>/, '`\1`')
     #content = content.gsub(/<pre lang="([^"]*)">(.*?)<\/pre>/m, '{% highlight \1 %}\2{% endhighlight %}')
+    content = content.gsub(/(<code>.*?<\/code>)/, "\n\n" + ' \1' + "\n\n")
     content = content.gsub(/(<pre.*?pre>)/m, "\n\n" + ' \1' + "\n\n")
     
     (1..3).each do |i|

@@ -10,15 +10,27 @@ So I run <strong>sudo swaon -s </strong>and get nothing atall!
 
 Then a google for "<strong>turning on swap space"</strong> got me to do the following:
 
-` # sudo dd if=/dev/zero of=/moreswap bs=1M count=512 `
+
+
+ <code> # sudo dd if=/dev/zero of=/moreswap bs=1M count=512 </code>
+
+
 That creates a 512 MB file named moreswap filled with zeros.
 
 <code>
 # sudo mkswap /moreswap
 # sudo swapon /moreswap
 </code>
-Appended the following line to ` /etc/fstab ` to make this change permanent.
-` /moreswap none swap sw 0 0 `
+Appended the following line to 
+
+ <code> /etc/fstab </code>
+
+ to make this change permanent.
+
+
+ <code> /moreswap none swap sw 0 0 </code>
+
+
 
 Worked like a charm!
 

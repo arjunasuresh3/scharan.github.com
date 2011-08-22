@@ -14,7 +14,11 @@ Here is what I did:
 </ul>
 Now come the interesting part. While wordpress provided me text to add in my .htaccess, it did not provide the code for redirection. Google helped me add the following line in my .htaccess file that did the trick!
 
-` RedirectMatch permanent ^/[0-9]{4}/[0-9]{2}/([a-z0-9]+) http://saicharan.in/blog/$1 `
+
+
+ <code> RedirectMatch permanent ^/[0-9]{4}/[0-9]{2}/([a-z0-9]+) http://saicharan.in/blog/$1 </code>
+
+
 
 That did the trick. Thanks to BlogBloke!
 
