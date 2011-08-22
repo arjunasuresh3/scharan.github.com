@@ -17,11 +17,15 @@ status: publish
 <strong>Setting up gitweb on a machine with no root access:</strong>
 <div>First, set up lighttpd:</div>
 <div>     Download from <a href="http://www.lighttpd.net/download">http://www.lighttpd.net/download</a></div>
-<pre class="brush:shell">  $ mkdir -p ~/usr
+
+<pre class="brush: shell">
+  $ mkdir -p ~/usr
   $ tar -xvf lighttpd-*; cd !$;
   $ ./configure --prefix /home/&lt;you&gt;/usr
   $ make
-  $ make install ## lighttpd is now at ~/usr/sbin/</pre>
+  $ make install ## lighttpd is now at ~/usr/sbin/
+</pre>
+
 <div>     - Now, if all is well, you should be able to run git instaweb in your local git repository.</div>
 <div>     - If you see a message like base-docroot not found at /PATH/TO/SOME/WHERE,</div>
 <div>     - then it probably did not find that directory.</div>

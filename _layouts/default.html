@@ -20,6 +20,27 @@
    <script type="text/javascript" language="javascript" src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
    <script type="text/javascript" language="javascript" src="http://google-code-prettify.googlecode.com/svn/trunk/src/lang-css.js"></script>
    <script type="text/javascript" src="https://raw.github.com/scharan/munich/master/prettify-adapter.js"> </script>
+   <!--script type="text/javascript">
+$(document).ready(function() {
+    var brush = /^brush:\s*(.*)/;
+
+    // First, fix the PRE-brushes.
+    $.each( $("pre").filter( function() {
+                                 try {
+                                     return $(this).attr('class').match( brush );
+                                 } catch(err) {
+                                   return 0;
+                                 }
+                             }),
+            function( i, cls ){
+                //alert( $(cls).attr('class') + " ~ " + $(cls).attr('class').match( brush )[1] );
+                $(cls).attr( 'class', "prettyprint lang-"+ $(cls).attr('class').match( brush )[1] );
+            });
+
+    //Now prettyprint.
+    prettyPrint();
+});
+   </script-->
    <!-- End: Sai Charan's customizations -->
 
 </head>

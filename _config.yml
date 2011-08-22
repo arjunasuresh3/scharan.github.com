@@ -1,9 +1,9 @@
-markdown: rdiscount
+markdown: kramdown
 paginate: 5
 
 # Need this hack to work with the wordpressdotcom.rb imported
 # WP posts.
-textile_ext: html, textile
+textile_ext: textile
 
 domain: aws.saicharan.in
 email: me@saicharan.in
