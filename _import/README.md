@@ -10,5 +10,4 @@ Two ways to import from WP:
   - cd .. ; rm -rf _posts/ && mv _import/_posts/ .
   - sudo jekyll /var/www/html/ --permalink '/jekyll/:year/:month/:day/:title/'
 
-_posts.html/ contains the html files generated using migrators
-_posts/ contains markup obtained using the scripts in _import/ folder.
+_posts.html/ contains the html files generated using migrators while _posts/ contains markup obtained using the scripts in _import/ folder.
