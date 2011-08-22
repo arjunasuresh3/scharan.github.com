@@ -1,4 +1,5 @@
 Two ways to import from WP:
+
 - Using the migrators
   - cd <folder containing _config.yaml; i.e., the project root folder>
   - ruby -r '/usr/lib64/ruby/gems/1.8/gems/jekyll-0.11.0/lib/jekyll/migrators/wordpressdotcom.rb' -e 'Jekyll::WordpressDotCom.process("_import/wordpress.xml")'
