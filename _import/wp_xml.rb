@@ -20,16 +20,16 @@ doc.elements.each("rss/channel/item[wp:status = 'publish' and wp:post_type = 'po
 
     content = post['content:encoded'].text
 
-    #content = DownmarkIt.to_markdown(content)
+    content = DownmarkIt.to_markdown(content)
 
     #content = content.gsub(/<code>(.*?)<\/code>/, '`\1`')
     #content = content.gsub(/<pre lang="([^"]*)">(.*?)<\/pre>/m, '{% highlight \1 %}\2{% endhighlight %}')
-    content = content.gsub(/(<code>.*?<\/code>)/, "\n\n" + ' \1' + "\n\n")
-    content = content.gsub(/(<pre.*?pre>)/m, "\n\n" + ' \1' + "\n\n")
+    #content = content.gsub(/(<code>.*?<\/code>)/, "\n\n" + ' \1' + "\n\n")
+    #content = content.gsub(/(<pre.*?pre>)/m, "\n\n" + ' \1' + "\n\n")
     
-    (1..3).each do |i|
-        content = content.gsub(/<h#{i}>([^<]*)<\/h#{i}>/, ('#'*i) + ' \1')
-    end
+    #(1..3).each do |i|
+    #    content = content.gsub(/<h#{i}>([^<]*)<\/h#{i}>/, ('#'*i) + ' \1')
+    #end
 
     puts "Converting: #{name}"
 

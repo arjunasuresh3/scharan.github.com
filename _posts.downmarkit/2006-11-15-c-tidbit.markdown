@@ -1,0 +1,7 @@
+--- 
+wordpress_id: "29"
+layout: post
+title: C Tidbit
+wordpress_url: http://sricharan.org/blog/?p=29
+---
+The assignment operator returns something! In the case of a character, it returns the character that was assigned. So, it is useful to write code this way:while ((to[i] = from[i]) != '\0')

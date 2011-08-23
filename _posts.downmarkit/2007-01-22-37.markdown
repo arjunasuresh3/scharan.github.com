@@ -1,0 +1,6 @@
+--- 
+wordpress_id: "37"
+layout: post
+wordpress_url: http://sricharan.org/blog/?p=37
+---
+This is a test post from Google Docs &amp; Spreadsheets! If this works, the integration that Google is providing will be seamless. Just too good I should say.One up to Google on their thoughtfulness.
