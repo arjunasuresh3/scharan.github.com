@@ -30,16 +30,18 @@
     <div id="top">
       <div id="header">
         <h1><a href="/">{{ site.title }}</a></h1>
-        <div>{{ site.tagline }} </div>
+        <div>{{ site.tagline }}</div>
       </div>
 
       <ul id="nav">
 	<li><a href="/">Home</a></li>
+	<!--
 	{% for page in site.pages %}
 	{% if page.title %}
            <li><a href="{{ page.id }}">{{ page.title }}</a></li>
 	{% endif %}
 	{% endfor %}
+	-->
         <li><a href="/atom.xml">RSS</a></li>
       </ul>
       <ul id="nav" style="margin-top: 0px">  </ul>
