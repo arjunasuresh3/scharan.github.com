@@ -5,17 +5,21 @@
    <title>{{ page.title }}</title>
    <meta name="author" content="{{site.author}}" />
    <link href="http://feeds.feedburner.com/{{site.feedburner.feedburnerid}}" rel="alternate" title="{{site.title}}" type="application/atom+xml" />
-
-   <!-- syntax highlighting CSS -->
    <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
-
-   <!-- Homepage CSS -->
    <link rel="stylesheet" href="/css/munich.css" type="text/css" media="screen, projection" />
 
    <!-- Start: Sai Charan's customizations -->
    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
-   <script type="text/javascript" src="https://raw.github.com/scharan/munich/master/customize-disqus.js"> </script>
-
+   <!--script type="text/javascript" src="https://raw.github.com/scharan/munich/master/customize-disqus.js"> </script-->
+   <script type="text/javascript">
+$(document).ready(function() {
+    var nodsq = ["ask", "about", "about.html", "search.html", "search", "index.htm", "index.html"];
+    
+    if( $.inArray($(location).attr('href').replace(/\/$/,"").split('/').reverse()[0], nodsq) >= 0 ) {
+        $("#disqus_thread").hide();
+    }
+});
+   </script>
    <link rel="stylesheet" type="text/css" href="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css" />
    <link rel="stylesheet" type="text/css" href="http://google-code-prettify.googlecode.com/svn/trunk/styles/sons-of-obsidian.css" />   
    <script type="text/javascript" language="javascript" src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
