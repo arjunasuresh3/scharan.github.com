@@ -16,3 +16,7 @@ disqus:
 
 feedburner:
   feedburnerid: scharan
+
+google:
+  analytics-id: UA-810922-4
+
