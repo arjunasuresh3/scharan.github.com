@@ -1,7 +1,0 @@
---- 
-wordpress_id: "276"
-layout: post
-title: Indian Almanac Bookmarklet
-wordpress_url: http://saicharan.in/blog/?p=276
----
-Traditional events require fairly strict observances throughout the year. For this, I tend to rely on the online service: [http://mypanchang.com](http://mypanchang.com). Though I bookmarked the page, it is error prone in that you will be always be shown the date that you bookmarked. Instead, it would be of immense help to view today's almanac. So, here is my bookmarklet for showing today's almanac for Los Angeles. You can edit it to show your city's almanac by looking at the URL for your city from here: [http://www.mypanchang.com/selectyourcity2011.html](http://www.mypanchang.com/selectyourcity2011.html)Bookmarklet: [ LA South Indian Almanac ](javascript: function panchangam(){var d = new Date(); var day=d.getDate(); var month=d.getMonth(); var year = d.getFullYear();location.href='http://www.mypanchang.com/phppanchang.php?'+'&yr='+year+'&cityhead=Los Angeles, CA&cityname=LosAngeles-CA'+'&monthtype=0&mn='+month+'#'+day};panchangam();)<script src="http://gist-it.appspot.com/github/scharan/Goodies/raw/master/almanac.js" type="text/javascript"></script><!--pre class="brush: javascript">javascript: function panchangam(){var d = new Date(); var day=d.getDate(); var month=d.getMonth(); var year = d.getFullYear();location.href='http://www.mypanchang.com/phppanchang.php?'+'&amp;yr='+year+'&amp;cityhead=Los Angeles, CA&amp;cityname=LosAngeles-CA'+'&amp;monthtype=0&amp;mn='+month+'#'+day};panchangam();</pre-->

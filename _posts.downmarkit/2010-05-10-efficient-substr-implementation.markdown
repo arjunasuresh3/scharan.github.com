@@ -1,7 +1,0 @@
---- 
-wordpress_id: "235"
-layout: post
-title: Efficient Substr implementation
-wordpress_url: http://saicharan.in/blog/?p=235
----
-I came up with this implementation of substring method. Anyone got ideas to make it more terse _and_ more efficient?<pre class="brush: cpp">bool substring(const char* str, const char* substr){const char *currentString = str, *backTrackString = str, *currSubstr = substr;while( strlen(backTrackString) &gt;= strlen(substr) ){while( *currSubstr &amp;&amp; *currentString++ == *currSubstr++);if( !*currSubstr ) return true;currentString = backTrackString++;currSubstr = substr;}return false;}</pre>In particular, can we do without atleast one of the local variables - while still being as efficient or better? A more basic question - so you think this is efficient?

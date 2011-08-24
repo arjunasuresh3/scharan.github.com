@@ -1,7 +1,0 @@
---- 
-wordpress_id: "45"
-layout: post
-title: yum ntfs-3g
-wordpress_url: http://sricharan.org/blog/?p=45
----
-To install ntfs support for Fedora linux, use the following as root:yum install fuse fuse-libs ntfs-3greference: http://www.mjmwired.net/resources/mjm-fedora-f7.html#ntfs<div class="blogger-post-footer">My experiments with Computers, Computing, Programming &amp; Software.</div>

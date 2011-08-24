@@ -1,7 +1,0 @@
---- 
-wordpress_id: "6"
-layout: post
-title: Firefox extension updated!
-wordpress_url: http://sricharan.org/blog/?p=6
----
-At last! The [SaveURI](http://sricharan-log.blogspot.com/2006/04/new-firefox-extension.html) 0.1 for firefox is ready! Now I can breathe easy. It is available [here](http://scharan20.googlepages.com/SaveURI-0.1-fx.xpi). Try it and post your comments.As I said earlier, this extension is useful for "remembering" the URL of every page that you visited and saved. This is still in beta as it has only just been submitted to [Mozilla Foundation](https://addons.mozilla.org/developers/main.php) for review.Cheers! Now I can do something else while I wait for the review. :)Update:Yesterday, the Firefox 1.5.0.1 running on my system said I needed to upgrade, on saying go ahead, it checked my extensions for compatibility and said SaveURI is incompatible with 1.5.0.2! Anyway, later, I downloaded FF 1.5.0.2 from [Get Firefox](http://getfirefox.com/) and installed it. Then, I installed the SaveURI extension and it works just right!Any ideas? [Buzz me](mailto:scharan20@gmail.com).Update:This morning (20th April), SaveURI 0.3 was ready. Queued it up for approval at the MDC. Waiting for their approval. If you want to try it, it is available [here](http://scharan20.googlepages.com/SaveURI-0.3.0.1-fx.xpi). Try it and let me know.<div class="blogger-post-footer">My experiments with Computers, Computing, Programming &amp; Software.</div>
