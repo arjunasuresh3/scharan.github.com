@@ -1,0 +1,14 @@
+---
+layout: post
+title: Page Not Found
+---
+<div id="page-not-found">
+</div>
+
+<script type="text/javascript">
+$(document).ready( function() {
+   $("#page-not-found").text( $(location).attr('href') );
+   $("#disqus_thread").hide();
+   $("span.meta").hide();
+});
+</script>

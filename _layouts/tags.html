@@ -1,0 +1,55 @@
+---
+layout: post
+---
+
+<!-- https://gist.github.com/143571#gistcomment-7054 -->
+<h2>Categories</h2>
+
+{% for category in site.categories %}
+  <a href="#{{ category | first }}">{{ category | first }}</a>
+{% endfor %}
+<br /> <br />
+
+<h2>Articles by Category:</h2>
+<ul>
+{% for category in site.categories %}
+  <li><a name="{{ category | first }}">{{ category | first }}</a>
+    <ul>
+    {% for posts in category %}
+      {% for post in posts %}
+        {% if post.url or post.title %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+	{% endif %}
+      {% endfor %}
+    {% endfor %}
+    </ul>
+  </li>
+{% endfor %}
+</ul>
+
+<br /> <br />
+<br /> <br />
+
+<h2>Tags</h2>
+
+{% for category in site.tags %}
+  <a href="#{{ category | first }}">{{ category | first }}</a>
+{% endfor %}
+<br /> <br />
+
+<h2>Articles by tag:</h2>
+<ul>
+{% for category in site.tags %}
+  <li><a name="{{ category | first }}">{{ category | first }}</a>
+    <ul>
+    {% for posts in category %}
+      {% for post in posts %}
+        {% if post.url or post.title %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+	{% endif %}
+      {% endfor %}
+    {% endfor %}
+    </ul>
+  </li>
+{% endfor %}
+</ul>

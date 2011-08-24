@@ -1,5 +1,6 @@
 markdown: kramdown
 paginate: 5
+folder: /jekyll
 
 # Need this hack to work with the wordpressdotcom.rb imported
 # WP posts.
