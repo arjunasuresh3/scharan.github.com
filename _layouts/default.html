@@ -8,22 +8,19 @@
    <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
    <link rel="stylesheet" href="/css/munich.css" type="text/css" media="screen, projection" />
 
+   <link rel="alternate" type="application/rss+xml" title="RSS" href="http://{{site.domain}}/atom.xml"/>
+   <link rel="Shortcut Icon" type="image/png" href="http://{{site.domain}}/favicon.gif" />
+   <meta name="description" content="{{site.tagline}}" />
+
    <!-- Start: Sai Charan's customizations -->
    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
-   <!--script type="text/javascript" src="https://raw.github.com/scharan/munich/master/customize-disqus.js"> </script-->
-   <script type="text/javascript">
-$(document).ready(function() {
-    var nodsq = ["ask", "about", "about.html", "search.html", "search", "index.htm", "index.html"];
-    
-    if( $.inArray($(location).attr('href').replace(/\/$/,"").split('/').reverse()[0], nodsq) >= 0 ) {
-        $("#disqus_thread").hide();
-    }
-});
-   </script>
+   <script type="text/javascript" src="https://raw.github.com/scharan/munich/master/customize-disqus.js"> </script>
+
    <link rel="stylesheet" type="text/css" href="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css" />
    <link rel="stylesheet" type="text/css" href="http://google-code-prettify.googlecode.com/svn/trunk/styles/sons-of-obsidian.css" />   
    <script type="text/javascript" language="javascript" src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
    <script type="text/javascript" language="javascript" src="http://google-code-prettify.googlecode.com/svn/trunk/src/lang-css.js"></script>
+
    <script type="text/javascript" src="https://raw.github.com/scharan/munich/master/prettify-adapter.js"> </script>
    <!-- End: Sai Charan's customizations -->
 
@@ -39,15 +36,9 @@ $(document).ready(function() {
 
       <ul id="nav">
 	<li><a href="/">Home</a></li>
-	<li><a href="/jekyll/about.html">About Sai</a></li>
+	<li><a href="/jekyll/about.html">About</a></li>
 	<li><a href="/jekyll/search.html">Search</a></li>
-	<!--
-	{% for page in site.pages %}
-	{% if page.title %}
-           <li><a href="{{ page.id }}">{{ page.title }}</a></li>
-	{% endif %}
-	{% endfor %}
-	-->
+	<li><a href="/jekyll/archive.html">Archive</a></li>
         <li><a href="/atom.xml">RSS</a></li>
       </ul>
       <ul id="nav" style="margin-top: 0px">  </ul>
@@ -92,7 +83,7 @@ $(document).ready(function() {
     
     <div id="bottom">
       <!-- Please do not remove the credit attribution here. Feel free to modify the rest of theme as you wish, however. -->Original <b>design</b> for Tumblr crafted by <a href="http://www.prshnth.com">Prashanth Kamalakanthan</a>.<br />
-      Adapted for <a href="www.tumblr.com">Tumblr</a> & <a href="http://jekyllrb.com">Jekyll</a> by <a href="http://scharan.tumblr.com/about"><b>Sai Charan</b></a>. Customized theme available on <a href="https://github.com/scharan/munich" target="_blank"><b>Github</b></a>. 
+      Adapted for <a href="www.tumblr.com">Tumblr</a> & <a href="http://jekyllrb.com">Jekyll</a> by <a href="http://{{site.domain}}/about"><b>Sai Charan</b></a>. Customized theme available on <a href="https://github.com/scharan/saicharan.in" target="_blank"><b>Github</b></a>. 
     </div>
 
 <script type="text/javascript">

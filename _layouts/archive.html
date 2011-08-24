@@ -1,0 +1,13 @@
+---
+layout: post
+---
+<table>
+{% for post in site.posts %}
+<tr> 
+  <td>{{ post.date | date: '%d' }}</td> 
+  <td align="center">{{ post.date | date: '%b' }}</td>
+  <td>{{ post.date | date: '%Y' }}</td>
+  <td> &raquo; <a href="{{ post.url }}">{{ post.title }}</a> </td>
+</tr>
+{% endfor %}
+</table>
