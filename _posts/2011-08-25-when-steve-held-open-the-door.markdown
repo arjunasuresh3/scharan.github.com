@@ -1,6 +1,7 @@
 ---
 title: When Steve Held Open the Door
 layout: post
+date: 2011-08-25 09:40:00
 tags: 
 - steve
 - experience

@@ -29,4 +29,10 @@ Update:
 * Adding pages for year, month and day was a ton more effort. I modified archive.rb from [josegonzalez](https://github.com/josegonzalez/josediazgonzalez.com/_plugins) and also customized his \_layout/archive\_*.html
 * Added an error handler with some JS to show my own custom error page.
 
-You can find the sources here: <https://github.com/scharan/saicharan.in>
+You can find the sources here: <https://github.com/scharan/saicharan.in>.
+
+_Update:_
+
+I also modified [metajack's jekyll.el](https://github.com/metajack/jekyll/blob/master/emacs/jekyll.el) to add a date: header (with date & time) on publish: <https://gist.github.com/1171592>. The gist:
+
+<script src="https://gist.github.com/1171592.js?file=jekyll.el"></script>

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: When GOD called Vic Gundotra
+date: 2011-08-25 10:10:00
 tags: 
 - steve
 - anecdote

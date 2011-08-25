@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Tributes to Steve Jobs
+date: 2011-08-25 11:15:00
 tags: 
 - steve
 - apple
