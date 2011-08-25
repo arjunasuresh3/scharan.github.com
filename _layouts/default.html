@@ -94,7 +94,7 @@
 $(document).ready( function(){
    $.each( $("a").filter( function(){ 
                       try { // In case the anchor does not have href.
-                          return !$(this).attr('href').match(/^\//); // URL is relative, not absolute.
+                          return !$(this).attr('href').match(/^[\/#]/); // URL is relative: starts with / or #
                       } catch (e) {
                           return true;
                       }
