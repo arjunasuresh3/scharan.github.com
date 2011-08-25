@@ -618,6 +618,11 @@ pre.prettyprint {
     visibility: hidden;
 }
 
-a {
-    target: "_blank";
+hr {
+    border: 0;
+}
+
+hr.flourish::after {
+    content: "··•··";
+    letter-spacing: 2em;
 }
