@@ -1,6 +1,7 @@
 markdown: kramdown
 paginate: 5
 folder: /jekyll
+permalink: '/jekyll/:year/:month/:day/:title/'
 
 # Need this hack to work with the wordpressdotcom.rb imported
 # WP posts.
