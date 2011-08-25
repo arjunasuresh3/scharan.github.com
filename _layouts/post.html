@@ -11,17 +11,13 @@ layout: default
   <span class="ttl"><a href="{{ page.id }}">{{ page.title }}</a></span>
   <div class="body">
     {{ content }}
-    
-    <br />
-    <div style="text-align: center">
-      <!-- http://en.wikipedia.org/wiki/Interpunct >
-      &nbsp; &middot; &nbsp; &#12539; &nbsp; &bull; &nbsp; &#12539; &nbsp; &middot; &nbsp; -->
-      <hr class="flourish" />
-    </div>
   </div>
+</div>
 
-  {% if page.tags or page.categories %}
-  <br />
+<hr class="flourish" />
+
+{% if page.tags or page.categories %}
+<div class="post text">
   <div class="body">
     Tags&nbsp; &middot; &nbsp;
     {% for tag in page.tags %}
@@ -31,8 +27,8 @@ layout: default
     <a href="{{site.folder}}/tags.html#{{ cat }}">{{ cat }}</a>&nbsp; &middot; &nbsp;
     {% endfor %}
   </div>
-  {% endif %}
 </div>
+{% endif %}
 
 {% if site.disqus %}
 <div id="disqus_thread"></div>

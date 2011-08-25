@@ -619,10 +619,17 @@ pre.prettyprint {
 }
 
 hr {
+    text-align: center;
     border: 0;
+    color: #D6DBDF;
+    clear: both;
 }
 
 hr.flourish::after {
     content: "··•··";
     letter-spacing: 2em;
+}
+
+.post {
+    margin: 0 0 50px 0;
 }
