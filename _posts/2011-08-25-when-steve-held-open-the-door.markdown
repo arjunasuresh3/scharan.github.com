@@ -1,5 +1,9 @@
 ---
 title: When Steve Held Open the Door
+layout: post
+tags: 
+- steve
+- experience
 ---
 
 [David Carins](http://tumblr.davidcairns.org/post/9359368094/so-steve-jobs-has-left-his-role-as-apples-ceo) writes: 
