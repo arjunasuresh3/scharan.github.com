@@ -86,6 +86,25 @@
       Adapted for <a href="www.tumblr.com">Tumblr</a> & <a href="http://jekyllrb.com">Jekyll</a> by <a href="http://{{site.domain}}{{site.folder}}/about"><b>Sai Charan</b></a>. Customized theme available on <a href="https://github.com/scharan/saicharan.in" target="_blank"><b>Github</b></a>. 
     </div>
 
+<!-- Markdown does not have option to add target attribute 
+     & this cannot be done using CSS, since this is not a 
+     visual style. So, use jQuery for all absolute URLs! 
+-->
+<script type="text/javascript">
+$(document).ready( function(){
+   $.each( $("a").filter( function(){ 
+                      try { // In case the anchor does not have href.
+                          return !$(this).attr('href').match(/^\//); // URL is relative, not absolute.
+                      } catch (e) {
+                          return true;
+                      }
+                  }),
+           function( index, tag ) { 
+               $(tag).attr('target', '_blank');
+           });
+});
+</script>
+
 <script type="text/javascript">
 // This adds x comments & y reactions. Based on Tumblr theme: munichtheme.tumblr.com
 //<![CDATA[

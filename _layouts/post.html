@@ -18,10 +18,10 @@ layout: default
   <div class="body">
     Tags: 
     {% for tag in page.tags %}
-    <a href="http://{{site.domain}}{{site.folder}}/tags.html#{{ tag }}"> {{ tag }}&nbsp;</a> 
+    <a href="{{site.folder}}/tags.html#{{ tag }}"> {{ tag }}&nbsp;</a> 
     {% endfor %}
     {% for cat in page.categories %}
-    <a href="http://{{site.domain}}{{site.folder}}/tags.html#{{ cat }}"> {{ cat }}&nbsp;</a> 
+    <a href="{{site.folder}}/tags.html#{{ cat }}"> {{ cat }}&nbsp;</a> 
     {% endfor %}
   </div>
   {% endif %}
