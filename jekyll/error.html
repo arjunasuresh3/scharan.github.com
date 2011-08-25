@@ -11,7 +11,7 @@ $(document).ready( function() {
         url += '/';           // to simplify RegExp handling below, which assumes
     }                         // that the wrong URLs will end in '/'
 
-    errorHandler = function( url ) {
+    handleError = function( url ) {
         var mat = null;
         var pageUrl = /^http:\/\/{{site.domain}}(\/.*){0,1}\/page\/(\d+)/i;
         var tagUrl = /^http:\/\/{{site.domain}}(\/.*){0,1}\/tag\/(.*)\//i;
@@ -22,14 +22,14 @@ $(document).ready( function() {
         } else if ( (mat = url.match( tagUrl )) || (mat = url.match( catUrl )) ) {
            go('/jekyll/tags.html#'+mat.reverse()[0]);
         }
-    return 1; // Failed to handle. Report.
+    return 0; // Failed to handle. Report.
     }
 
     go = function( url ) {
         $(location).attr('href', url );
     }
 
-    if( errorHandler(url) ) {
+    if( !handleError(url) ) {
          var errorPrologue = "The page you requested: ";
          var errorEpilogue = " was not found. You may <a href='{{site.folder}}/search'>search</a> for what you are looking.";
          $("#page-not-found").html( errorPrologue + $(location).attr('href') + errorEpilogue );
