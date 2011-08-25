@@ -11,17 +11,22 @@ layout: default
   <span class="ttl"><a href="{{ page.id }}">{{ page.title }}</a></span>
   <div class="body">
     {{ content }}
+    
+    <br />
+    <div style="text-align: center">
+      &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp; &middot; &nbsp;
+    </div>
   </div>
 
   {% if page.tags or page.categories %}
   <br />
   <div class="body">
-    Tags: 
+    Tags&nbsp; &middot; &nbsp;
     {% for tag in page.tags %}
-    <a href="{{site.folder}}/tags.html#{{ tag }}"> {{ tag }}&nbsp;</a> 
+    <a href="{{site.folder}}/tags.html#{{ tag }}">{{ tag }}</a>&nbsp; &middot; &nbsp;
     {% endfor %}
     {% for cat in page.categories %}
-    <a href="{{site.folder}}/tags.html#{{ cat }}"> {{ cat }}&nbsp;</a> 
+    <a href="{{site.folder}}/tags.html#{{ cat }}">{{ cat }}</a>&nbsp; &middot; &nbsp;
     {% endfor %}
   </div>
   {% endif %}
