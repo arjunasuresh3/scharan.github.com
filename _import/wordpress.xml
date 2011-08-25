@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/3.2.1" created="2011-08-21 16:14" -->
+<!-- generator="WordPress/3.2.1" created="2011-08-25 01:06" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.1/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,10 +29,10 @@
 	<title>Think. Done.</title>
 	<link>http://saicharan.in/blog</link>
 	<description>Sai Charan&#039;s  experiments with Computers, Computing, Programming &#38; Software.</description>
-	<pubDate>Sun, 21 Aug 2011 16:14:47 +0000</pubDate>
+	<pubDate>Thu, 25 Aug 2011 01:06:47 +0000</pubDate>
 	<language>en</language>
 	<wp:wxr_version>1.1</wp:wxr_version>
-	<wp:base_site_url>http://saicharan.in/blog/</wp:base_site_url>
+	<wp:base_site_url>http://saicharan.in/blog</wp:base_site_url>
 	<wp:base_blog_url>http://saicharan.in/blog</wp:base_blog_url>
 
 	<wp:author><wp:author_id>1</wp:author_id><wp:author_login>admin</wp:author_login><wp:author_email>sreecharan.k@gmail.com</wp:author_email><wp:author_display_name><![CDATA[Sai Charan]]></wp:author_display_name><wp:author_first_name><![CDATA[]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
@@ -139,6 +139,7 @@
 	<wp:tag><wp:term_id>106</wp:term_id><wp:tag_slug>highlight</wp:tag_slug><wp:tag_name><![CDATA[highlight]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:term_id>134</wp:term_id><wp:tag_slug>hn</wp:tag_slug><wp:tag_name><![CDATA[HN]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:term_id>115</wp:term_id><wp:tag_slug>ical</wp:tag_slug><wp:tag_name><![CDATA[ical]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>136</wp:term_id><wp:tag_slug>jekyll</wp:tag_slug><wp:tag_name><![CDATA[Jekyll]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:term_id>84</wp:term_id><wp:tag_slug>ld-killed</wp:tag_slug><wp:tag_name><![CDATA[ld killed]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:term_id>85</wp:term_id><wp:tag_slug>ld-terminated</wp:tag_slug><wp:tag_name><![CDATA[ld terminated]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:term_id>82</wp:term_id><wp:tag_slug>linux</wp:tag_slug><wp:tag_name><![CDATA[linux]]></wp:tag_name></wp:tag>
@@ -146,6 +147,7 @@
 	<wp:tag><wp:term_id>131</wp:term_id><wp:tag_slug>magic</wp:tag_slug><wp:tag_name><![CDATA[magic]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:term_id>119</wp:term_id><wp:tag_slug>matlab</wp:tag_slug><wp:tag_name><![CDATA[matlab]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:term_id>130</wp:term_id><wp:tag_slug>metaprogramming</wp:tag_slug><wp:tag_name><![CDATA[metaprogramming]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>137</wp:term_id><wp:tag_slug>migrating</wp:tag_slug><wp:tag_name><![CDATA[migrating]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:term_id>122</wp:term_id><wp:tag_slug>networking</wp:tag_slug><wp:tag_name><![CDATA[networking]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:term_id>107</wp:term_id><wp:tag_slug>no-root</wp:tag_slug><wp:tag_name><![CDATA[no root]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:term_id>108</wp:term_id><wp:tag_slug>no-sudo</wp:tag_slug><wp:tag_name><![CDATA[no sudo]]></wp:tag_name></wp:tag>
@@ -165,6 +167,7 @@
 	<wp:tag><wp:term_id>89</wp:term_id><wp:tag_slug>sshd</wp:tag_slug><wp:tag_name><![CDATA[sshd]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:term_id>113</wp:term_id><wp:tag_slug>ssh_auth_sock</wp:tag_slug><wp:tag_name><![CDATA[SSH_AUTH_SOCK]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:term_id>128</wp:term_id><wp:tag_slug>stackoverflow</wp:tag_slug><wp:tag_name><![CDATA[stackoverflow]]></wp:tag_name></wp:tag>
+	<wp:tag><wp:term_id>138</wp:term_id><wp:tag_slug>static-blog</wp:tag_slug><wp:tag_name><![CDATA[static blog]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:term_id>93</wp:term_id><wp:tag_slug>submit-button</wp:tag_slug><wp:tag_name><![CDATA[submit button]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:term_id>101</wp:term_id><wp:tag_slug>thunderbird</wp:tag_slug><wp:tag_name><![CDATA[thunderbird]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:term_id>111</wp:term_id><wp:tag_slug>tmux</wp:tag_slug><wp:tag_name><![CDATA[tmux]]></wp:tag_name></wp:tag>
@@ -5085,9 +5088,9 @@ Does this miss any cases? Try it out here:
 
 <input id="email" type="text" value="Email" /> <button onclick="validateEmail( getElementById('email').value );return false;"> Validate email! </button>
 
-<script type="text/javascript">
+<script type="text/javascript">// <![CDATA[
     function validateEmail( email ){ var emailRe = new RegExp("^[a-zA-Z]+([a-zA-Z0-9_.][a-zA-Z0-9_]+)+@([a-zA-Z0-9]+([.a-zA-Z0-9_])+)$",'i'); alert( emailRe.test( email ) ? "Valid" : "Invalid email" ); }
- </script><strong>Update: </strong>This script allowed '*' in the email ID. The correct re would be:
+// ]]></script><strong>Update: </strong>This script allowed '*' in the email ID. The correct re would be:
 <pre class="brush: javascript">var emailRe = new RegExp("^[a-zA-Z]+([a-zA-Z0-9_].[a-zA-Z0-9_]+)+@([a-zA-Z0-9_]+.[a-zA-Z0-9_]+)+$",'i');</pre>
 <strong>Bug again!</strong> The '.' character outside the character class [] matches *ANY* single character. This, however, definitely works!
 <pre class="brush: javascript">var emailRe = new RegExp("^[a-zA-Z]+([a-zA-Z0-9_.][a-zA-Z0-9_]+)+@([a-zA-Z0-9]+([.a-zA-Z0-9_])+)$".'i');</pre>
@@ -6459,6 +6462,102 @@ The script:
 		<wp:postmeta>
 			<wp:meta_key>tumblrize_post-id</wp:meta_key>
 			<wp:meta_value><![CDATA[9084364868]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>Migrating to Jekyll</title>
+		<link>http://saicharan.in/blog/2011/08/22/migrating-to-jekyll/</link>
+		<pubDate>Sun, 21 Aug 2011 19:05:18 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+		<guid isPermaLink="false">http://saicharan.in/blog/?p=457</guid>
+		<description></description>
+		<content:encoded><![CDATA[Ah! The joy of <a title="markdown" href="http://daringfireball.net/projects/markdown/" target="_blank">markdown</a>! I preferred to write text, not markup. As @gruber states at the opening, markdown allows me write simply. However, it was painful to blog with this workflow:
+<ul>
+	<li>write in markdown</li>
+	<li><a href="http://daringfireball.net/projects/markdown/dingus" target="_blank">convert to HTML</a></li>
+	<li>copy paste the HTML to blog editor</li>
+	<li>publish</li>
+</ul>
+It was just too painful. Enter <a href="http://jekyllrb.com" target="_blank">Jekyll</a>. I first came across <a href="http://www.allthingsdistributed.com/2011/08/Jekyll-amazon-s3.html" target="_blank">Jekyll</a> here on <a href="allthingsdistributed.com" target="_blank">allthingsdistributed.com</a>. <a href="http://tom.preston-werner.com/" target="_blank">Tom Preston-Werner</a> (Jekyll's author) notes <a href="http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html" target="_blank">here</a>, he needed something simpler - so he wrote Jekyll.
+
+I liked my new <a title="munich theme" href="https://github.com/scharan/munich" target="_blank">munich theme</a>, and so wrote my own <a href="https://github.com/scharan/saicharan.in/blob/master/index.html" target="_blank">index.html</a>, <a href="https://github.com/scharan/saicharan.in/blob/master/_layout/default.html" target="_blank">default.html</a>, <a href="https://github.com/scharan/saicharan.in/blob/master/_layout/post.html" target="_blank">post.html</a> and <a href="https://github.com/scharan/saicharan.in/blob/master/css/munich.css" target="_blank">css</a>. You can see the work in progress here: <a href="http://aws.saicharan.in" target="_blank">aws.saicharan.in</a>.]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>457</wp:post_id>
+		<wp:post_date>2011-08-22 00:35:18</wp:post_date>
+		<wp:post_date_gmt>2011-08-21 19:05:18</wp:post_date_gmt>
+		<wp:comment_status>open</wp:comment_status>
+		<wp:ping_status>open</wp:ping_status>
+		<wp:post_name>migrating-to-jekyll</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>post</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="post_tag" nicename="jekyll"><![CDATA[Jekyll]]></category>
+		<category domain="post_tag" nicename="migrating"><![CDATA[migrating]]></category>
+		<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>tumblrize_post-type</wp:meta_key>
+			<wp:meta_value><![CDATA[regular]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>tumblrize_post-id</wp:meta_key>
+			<wp:meta_value><![CDATA[9268661570]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>Static Blog Using Jekyll</title>
+		<link>http://saicharan.in/blog/2011/08/24/static-blog-using-jekyll/</link>
+		<pubDate>Tue, 23 Aug 2011 22:36:20 +0000</pubDate>
+		<dc:creator>admin</dc:creator>
+		<guid isPermaLink="false">http://saicharan.in/blog/?p=470</guid>
+		<description></description>
+		<content:encoded><![CDATA[This is what it took me to migrate from WordPress to Jekyll:
+
+* Import blog using the wordpressdotcom importer.
+* Use Disqus WP plugin to export comments into Disqus.
+* Generate static pages (include Disqus code in Jekyll template).
+* Add search functionality.
+* Add personal pages (about/search/rss).
+
+Done! (A preview is available at: http://aws.saicharan.in)
+
+Update: 
+* Adding tags was a lot more effort. A little help from https://gist.github.com/143571#gistcomment-7054 saved the day.
+* Adding pages for year, month and day was a ton more effort. I modified archive.rb from https://github.com/josegonzalez/josediazgonzalez.com/_plugins and also customized his _layout/archive_*.html
+* Added an error handler with some JS to show my own custom error page.]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>470</wp:post_id>
+		<wp:post_date>2011-08-24 04:06:20</wp:post_date>
+		<wp:post_date_gmt>2011-08-23 22:36:20</wp:post_date_gmt>
+		<wp:comment_status>open</wp:comment_status>
+		<wp:ping_status>open</wp:ping_status>
+		<wp:post_name>static-blog-using-jekyll</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>post</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="post_tag" nicename="jekyll"><![CDATA[Jekyll]]></category>
+		<category domain="post_tag" nicename="static-blog"><![CDATA[static blog]]></category>
+		<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>tumblrize_post-type</wp:meta_key>
+			<wp:meta_value><![CDATA[regular]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>tumblrize_post-id</wp:meta_key>
+			<wp:meta_value><![CDATA[9308743476]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 </channel>

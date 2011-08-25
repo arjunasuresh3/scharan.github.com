@@ -617,3 +617,7 @@ pre.prettyprint {
 .no-disqus {
     visibility: hidden;
 }
+
+a {
+    target: "_blank";
+}
