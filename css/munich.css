@@ -627,7 +627,7 @@ hr {
 
 hr.flourish::after {
     content: "··•··";
-    letter-spacing: 2em;
+    letter-spacing: 1em;
 }
 
 .post {
