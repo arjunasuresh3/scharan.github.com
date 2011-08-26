@@ -20,7 +20,7 @@ $(document).ready( function() {
         if( mat = url.match( pageUrl ) ) {
             go('/page'+mat.reverse()[0]);
         } else if ( (mat = url.match( tagUrl )) || (mat = url.match( catUrl )) ) {
-           go('/jekyll/tags.html#'+mat.reverse()[0]);
+           go('{{site.folder}}/tags.html#'+mat.reverse()[0].replace(/-/,' ')); // Handles a few pathological cases
         }
     return 0; // Failed to handle. Report.
     }
