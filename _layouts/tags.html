@@ -7,14 +7,14 @@ layout: post
 <h2>Tags</h2>
 
 {% for category in site.tags %}
-  <a href="#{{ category | first }}">{{ category | first }}</a>
+  <a href="#{{ category | first | downcase }}">{{ category | first }}</a>
 {% endfor %}
 <br /> <br />
 
 <h2>Articles by tag:</h2>
 <ul>
 {% for category in site.tags %}
-  <li><a name="{{ category | first }}">{{ category | first }}</a>
+  <li><a name="{{ category | first | downcase }}">{{ category | first }}</a>
     <ul>
     {% for posts in category %}
       {% for post in posts %}
@@ -33,14 +33,14 @@ layout: post
 <h2>Categories</h2>
 
 {% for category in site.categories %}
-  <a href="#{{ category | first }}">{{ category | first }}</a>
+  <a href="#{{ category | first | downcase }}">{{ category | first }}</a>
 {% endfor %}
 <br /> <br />
 
 <h2>Articles by Category:</h2>
 <ul>
 {% for category in site.categories %}
-  <li><a name="{{ category | first }}">{{ category | first }}</a>
+  <li><a name="{{ category | first | downcase }}">{{ category | first }}</a>
     <ul>
     {% for posts in category %}
       {% for post in posts %}
