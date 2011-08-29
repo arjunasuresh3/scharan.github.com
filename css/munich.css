@@ -632,3 +632,7 @@ hr.flourish::after {
 .post {
     margin: 0 0 50px 0;
 }
+
+.post pre {
+    font-size: 11px;
+}
