@@ -2,6 +2,7 @@ markdown: kramdown
 paginate: 5
 folder: /blog
 permalink: '/blog/:year/:month/:day/:title/'
+destination: /var/www/html/
 
 # Need this hack to work with the wordpressdotcom.rb imported
 # WP posts.
