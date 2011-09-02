@@ -7,7 +7,7 @@ meta:
   tumblrize_post-id: "9308743476"
   _edit_last: "1"
 tags: 
-- Jekyll
+- jekyll
 - static blog
 type: post
 status: publish

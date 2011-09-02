@@ -13,4 +13,4 @@ To ease publishing via Jekyll, I needed to push via FTP to my hosting provider. 
 
 So, I made a two line fix that handles static pages and _posts/ as follows: The time stamp of the markdown/static page is copied to the published post page. So, even though Jekyll regenerates the entire site, the timestamps are adjusted to prevent unnecessary push via tools like FTPSync. Note that other pages will still have the 'now' timestamp.
 
-The diff can be [viewed here](https://github.com/scharan/jekyll/compare/handle-modified-timestamps). Feedback/suggestions welcome in comments.
+The diff can be [viewed here](https://github.com/scharan/jekyll/compare/handle-modified-timestamps#diff-0). Feedback/suggestions welcome in comments.
