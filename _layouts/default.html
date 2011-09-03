@@ -28,108 +28,17 @@
 <body>
 
   <div id="wrapper">
-    <div id="top">
-      <div id="header">
-        <h1><a href="/">{{ site.title }}</a></h1>
-        <div>{{ site.tagline }}</div>
-      </div>
-
-      <ul id="nav">
-	<li><a href="/">Home</a></li>
-	<li><a href="{{site.folder}}/about.html">About</a></li>
-	<li><a href="{{site.folder}}/search.html">Search</a></li>
-	<li><a href="{{site.folder}}/archive.html">Archive</a></li>
-        <li><a href="/atom.xml">RSS</a></li>
-      </ul>
-      <ul id="nav" style="margin-top: 0px">  </ul>
-      <br class="clear">
-	
-    </div>
-
+    {% include top.html %}
     <div id="main">
       {{ content }}
-      
-      {% if paginator.page %}
-      <div id="pagenav">
-	<div class="inner">
-	  {% if paginator.next_page  %}
-	  <a id="older" href="/page{{ paginator.next_page }}">&larr; &nbsp; Wander back</a>
-	  {% endif %}
-	  <span id="pages">Page {{paginator.page}} of {{paginator.total_pages}}</span>
-	  {% if paginator.previous_page > 1  %}
-	  <a id="newer" href="/page{{ paginator.previous_page }}">Go forth &rarr; &nbsp;</a>
-	  {% elsif paginator.previous_page == 1 %}
-	  <a id="newer" href="/">Go forth &rarr; &nbsp;</a>
-	  {% endif %}
-	</div>
-      </div>
-      {% else %}
-      <div id="pagenav">
-	<div class="inner">
-	  {% if page.previous.url  %}
-	  <a id="older" href="{{ page.previous.url }}">&larr;&nbsp; Older</a>
-	  {% endif %}
-	  <span id="pages"> <a href="{{page.url}}" class="source a"> Permalink </a> </span>
-	  {% if page.next.url  %}
-	  <a id="newer" href="{{ page.next.url }}">Newer &rarr;&nbsp;</a>
-	  {% endif %}
-	</div>
-      </div>
-      {% endif %}
 
+      {% include pagination.html %}
     </div>
-    
     <br class="clear">
     
-    <div id="bottom">
-      <!-- Please do not remove the credit attribution here. Feel free to modify the rest of theme as you wish, however. -->Original <b>design</b> for Tumblr crafted by <a href="http://www.prshnth.com">Prashanth Kamalakanthan</a>.<br />
-      Adapted for <a href="www.tumblr.com">Tumblr</a> & <a href="http://jekyllrb.com">Jekyll</a> by <a href="{{site.folder}}/about"><b>Sai Charan</b></a>. Customized theme available on <a href="https://github.com/scharan/saicharan.in" target="_blank"><b>Github</b></a>. 
-    </div>
-
-<!-- Markdown does not have option to add target attribute 
-     & this cannot be done using CSS, since this is not a 
-     visual style. So, use jQuery for all absolute URLs! 
--->
-<script type="text/javascript">
-$(document).ready( function(){
-   $.each( $("a").filter( function(){ 
-                      try { // In case the anchor does not have href.
-                          return !$(this).attr('href').match(/^[\/#]/); // URL is relative: starts with / or #
-                      } catch (e) {
-                          return true;
-                      }
-                  }),
-           function( index, tag ) { 
-               $(tag).attr('target', '_blank');
-           });
-});
-</script>
-
-<script type="text/javascript">
-// This adds x comments & y reactions. Based on Tumblr theme: munichtheme.tumblr.com
-//<![CDATA[
-(function() {
-    var links = document.getElementsByTagName('a');
-    var query = '?';
-    for(var i = 0; i < links.length; i++) {
-    if(links[i].href.indexOf('#disqus_thread') >= 0) {
-        query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-    }
-    }
-    document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{{site.disqus.name}}/get_num_replies.js' + query + '"></' + 'script>');
-})();
-//]]>
-</script>
-
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("{{site.google.analytics-id}}");
-pageTracker._trackPageview();
-</script>
-
+    {% include bottom.html %}
+    {% include scripts.html %}
+  </div>
 </body>
 </html>
 

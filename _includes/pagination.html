@@ -1,0 +1,27 @@
+{% if paginator.page %}
+<div id="pagenav">
+  <div class="inner">
+    {% if paginator.next_page  %}
+    <a id="older" href="/page{{ paginator.next_page }}">&larr; &nbsp; Wander back</a>
+    {% endif %}
+    <span id="pages">Page {{paginator.page}} of {{paginator.total_pages}}</span>
+    {% if paginator.previous_page > 1  %}
+    <a id="newer" href="/page{{ paginator.previous_page }}">Go forth &rarr; &nbsp;</a>
+    {% elsif paginator.previous_page == 1 %}
+    <a id="newer" href="/">Go forth &rarr; &nbsp;</a>
+    {% endif %}
+  </div>
+</div>
+{% else %}
+<div id="pagenav">
+  <div class="inner">
+    {% if page.previous.url  %}
+    <a id="older" href="{{ page.previous.url }}">&larr;&nbsp; Older</a>
+    {% endif %}
+    <span id="pages"> <a href="{{page.url}}" class="source a"> Permalink </a> </span>
+    {% if page.next.url  %}
+    <a id="newer" href="{{ page.next.url }}">Newer &rarr;&nbsp;</a>
+    {% endif %}
+  </div>
+</div>
+{% endif %}

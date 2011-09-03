@@ -1,0 +1,12 @@
+<div class="post quote">
+  {% include meta.html %}
+  <span class="ttl"><a href="{{ page.id }}"><big>&#8220;</big></a></span>
+  <div class="body">
+    <blockquote>
+    {{ content }} 
+    </blockquote>
+  </div>
+  <div class="source">
+    {{ page.source | markdownify }}
+  </div>
+</div>

@@ -1,0 +1,13 @@
+{% if page.tags or page.categories %}
+<div class="post text">
+  <div class="body">
+    Tags&nbsp; &middot; &nbsp;
+    {% for tag in page.tags %}
+    <a href="{{site.folder}}/tags.html#{{ tag | downcase }}">{{ tag }}</a>&nbsp; &middot; &nbsp;
+    {% endfor %}
+    {% for cat in page.categories %}
+    <a href="{{site.folder}}/tags.html#{{ cat | downcase }}">{{ cat }}</a>&nbsp; &middot; &nbsp;
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

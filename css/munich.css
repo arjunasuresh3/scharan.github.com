@@ -535,7 +535,7 @@ p img {
     border: 0;
 }
 
-.post .body {
+.text .body {
     font-family: Verdana, Tahoma;
     font-size: 12px;
     font-style: normal;
@@ -635,4 +635,24 @@ hr.flourish::after {
 
 .post pre {
     font-size: 11px;
+}
+
+.quote .source {
+    text-align: right;
+}
+
+div.source p:before {
+    content: " — ";
+}
+
+.quote .source:before {
+    content: "„";
+    font-family: Georgia;
+    font-size: 45px;
+    font-weight: bold
+}
+
+.post big {
+    font-weight: bold;
+    font-size: 35px;
 }

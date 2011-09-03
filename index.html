@@ -4,15 +4,31 @@ title: Sai Charan
 ---
 
 {% for post in paginator.posts %}
+{% if post.layout == 'post' %}
 <div class="post text">
+{% else %}
+<div class="post {{post.layout}}">
+{% endif %}
   <span class="icon"><a href="{{ post.id }}">{{ post.title }}</a></span>
   <span class="meta">
     <a href="{{ post.id }}" class="timestamp">{{ post.date | date: '%d %b'}}</a>
     <a href="{{ post.id }}/#disqus_thread" class="count">Comments</a>
   </span>
+  {% if post.layout == 'quote' %}
+  <span class="ttl"><a href="{{ post.id }}"><big>&#8220;</big></a></span>
+  <div class="body">
+    <blockquote>
+    {{ post.content }} 
+    </blockquote>
+  </div>
+  <div class="source">
+   {{ post.source | markdownify }}
+  </div>  
+  {% else %}
   <span class="ttl"><a href="{{ post.id }}">{{ post.title }}</a></span>
   <div class="body">
     {{ post.content }}
   </div>
+  {% endif %}
 </div>
 {% endfor %}
