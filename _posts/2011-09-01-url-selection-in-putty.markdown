@@ -4,6 +4,7 @@ title: URL Selection in Putty
 tags: 
 - URL
 - putty
+- note
 date: 2011-09-01 15:26:22
 ---
 
