@@ -654,7 +654,17 @@ div.source p:before {
     color: #262626;
 }
 
+.quote .body:before {
+    content: "“";
+    font-family: Georgia;
+    font-size: 45px;
+    font-weight: bold;
+    background: #FFBC00;
+    color: #262626;
+}
+
 .post big {
     font-weight: bold;
     font-size: 35px;
 }
+
