@@ -6,17 +6,17 @@ layout: post
 {% if site.tags %}
 <h2>Tags</h2>
 
-{% for category in site.tags %}
-  <a href="#{{ category | first | downcase }}">{{ category | first }}</a>
+{% for tag in site.tags %}
+  <a href="#{{ tag | first | downcase }}">{{ tag | first }}</a>
 {% endfor %}
 <br /> <br />
 
 <h2>Articles by tag:</h2>
 <ul>
-{% for category in site.tags %}
-  <li><a name="{{ category | first | downcase }}">{{ category | first }}</a>
+{% for tag in site.tags %}
+  <li><a name="{{ tag | first | downcase }}">{{ tag | first }}</a>
     <ul>
-    {% for posts in category %}
+    {% for posts in tag %}
       {% for post in posts %}
         {% if post.url or post.title %}
         <li><a href="{{ post.url }}">{{ post.title }}</a></li>
