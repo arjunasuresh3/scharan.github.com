@@ -15,10 +15,12 @@
 {% else %}
 <div id="pagenav">
   <div class="inner">
-    {% if page.previous.url  %}
+    {% if page.previous.url %}
     <a id="older" href="{{ page.previous.url }}">&larr;&nbsp; Older</a>
     {% endif %}
+    {% if page.permalynk != false %}
     <span id="pages"> <a href="{{page.url}}" class="source a"> Permalink </a> </span>
+    {% endif %}
     {% if page.next.url  %}
     <a id="newer" href="{{ page.next.url }}">Newer &rarr;&nbsp;</a>
     {% endif %}
