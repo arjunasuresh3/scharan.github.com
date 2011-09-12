@@ -1,10 +1,11 @@
 {% if site.facebook %}
-<div id="fb-root"></div>
 <script>(function(d){
   var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
   js = d.createElement('script'); js.id = id; js.async = true;
   js.src = "//connect.facebook.net/en_US/all.js#appId={{site.facebook.appid}}&xfbml=1";
   d.getElementsByTagName('head')[0].appendChild(js);
 }(document));</script>
+
+<div id="fb-root"></div>
 <div class="fb-like" data-href="http://{{site.domain}}/{{page.id}}" data-layout="button_count" data-send="true" data-width="600" data-show-faces="true" data-action="recommend" data-colorscheme="dark"></div>
 {% endif %}
