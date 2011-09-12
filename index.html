@@ -2,6 +2,15 @@
 layout: default
 title: Sai Charan
 ---
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<script>
+  (function(d){
+  var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+  js = d.createElement('script'); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId={{site.facebook.appid}}&xfbml=1";
+  d.getElementsByTagName('head')[0].appendChild(js);
+  }(document));
+</script>
 
 {% for post in paginator.posts %}
 {% if post.layout == 'post' %}
@@ -31,16 +40,15 @@ title: Sai Charan
   </div>
   {% endif %}
 
-  <div id="fb-root"></div>
-  <script>(function(d){
-    var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
-    js = d.createElement('script'); js.id = id; js.async = true;
-    js.src = "//connect.facebook.net/en_US/all.js#appId=156000201153898&xfbml=1";
-    d.getElementsByTagName('head')[0].appendChild(js);
-    }(document));</script>
+  {% if site.twitter %}
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://{{site.domain}}/{{post.id}}" data-count="horizontal" data-via="{{site.twitter.id}}">Tweet</a>
+  {% endif %}
 
-  {% include twitter.html %}
-  {% include facebook.html %}
+
+  {% if site.facebook %}
+  <div id="fb-root"></div>
+  <div class="fb-like" data-href="http://{{site.domain}}/{{post.id}}" data-send="true" data-width="600" data-show-faces="true" data-action="recommend" data-colorscheme="dark" data-font="verdana"></div>
+  {% endif %}
 
 </div>
 {% endfor %}
