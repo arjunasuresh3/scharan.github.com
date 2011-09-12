@@ -668,20 +668,8 @@ div.source p:before {
     font-size: 35px;
 }
 
-/*
-span.meta div {
-    position: absolute;
-}
-
-span.meta .fb-root, .fb-like, .fb_edge_widget_with_comment, .fb_iframe_widget {
-    width: 85px;
-    top: 68px !important;
-    left: -100px;
-}
-*/
-
 /* Align FB & Twitter buttons */
-.fb_edge_widget_with_comment {
-    top: -34px;
-    left: 60px;
+.fb_edge_widget_with_comment { 
+    top: -31px;
+    left: 192px;
 }
