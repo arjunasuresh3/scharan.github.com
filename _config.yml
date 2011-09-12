@@ -2,11 +2,7 @@ markdown: kramdown
 paginate: 5
 folder: /blog
 permalink: '/blog/:year/:month/:day/:title/'
-#destination: /var/www/html/
-
-# Glynn support
-ftp_host: ftp.saicharan.in
-ftp_dir: /public_html
+destination: /var/www/html/
 
 # Need this hack to work with the wordpressdotcom.rb imported
 # WP posts.
@@ -27,3 +23,8 @@ feedburner:
 google:
   analytics-id: UA-810922-4
 
+facebook: 
+  appid: 174768005932240
+
+twitter: 
+  id: scharan
