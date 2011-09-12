@@ -20,42 +20,35 @@ title: Sai Charan
   })();
 </script>
 
-{% for post in paginator.posts %}
-{% if post.layout == 'post' %}
+{% for page in paginator.posts %}
+{% if page.layout == 'post' %}
 <div class="post text">
 {% else %}
-<div class="post {{post.layout}}">
+<div class="post {{page.layout}}">
 {% endif %}
-  <span class="icon"><a href="{{ post.id }}">{{ post.title }}</a></span>
+  <span class="icon"><a href="{{ page.id }}">{{ page.title }}</a></span>
   <span class="meta">
-    <a href="{{ post.id }}" class="timestamp">{{ post.date | date: '%d %b'}}</a>
-    <a href="{{ post.id }}/#disqus_thread" class="count">Comments</a>
+    <a href="{{ page.id }}" class="timestamp">{{ page.date | date: '%d %b'}}</a>
+    <a href="{{ page.id }}/#disqus_thread" class="count">Comments</a>
   </span>
-  {% if post.layout == 'quote' %}
-  <!--span class="ttl"><a href="{{ post.id }}"><big>&#8220;</big></a></span-->
+  {% if page.layout == 'quote' %}
   <div class="body">
     <blockquote>
-    {{ post.content }} 
+    {{ page.content }} 
     </blockquote>
   </div>
   <div class="source">
-   {{ post.source | markdownify }}
+   {{ page.source | markdownify }}
   </div>  
   {% else %}
-  <span class="ttl"><a href="{{ post.id }}">{{ post.title }}</a></span>
+  <span class="ttl"><a href="{{ page.id }}">{{ page.title }}</a></span>
   <div class="body">
-    {{ post.content }}
+    {{ page.content }}
   </div>
   {% endif %}
 
-  {% if site.twitter %}
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://{{site.domain}}/{{post.id}}" data-count="horizontal" data-via="{{site.twitter.id}}"></a>
-  {% endif %}
-  <div class="g-plusone" data-size="medium" data-href="http://{{site.domain}}/{{post.id}}"></div>
-  {% if site.facebook %}
-  <div id="fb-root"></div>
-  <div class="fb-like" data-href="http://{{site.domain}}/{{post.id}}" data-layout="button_count" data-send="true" data-width="600" data-show-faces="true" data-action="recommend" data-colorscheme="dark"></div>
-  {% endif %}
-
+  {% include twitter.html %}
+  {% include gplus.html %}
+  {% include facebook.html %}
 </div>
 {% endfor %}
