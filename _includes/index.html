@@ -1,0 +1,50 @@
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<script>
+  // Facebook-like
+  (function(d){
+  var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+  js = d.createElement('script'); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId={{site.facebook.appid}}&xfbml=1";
+  d.getElementsByTagName('head')[0].appendChild(js);
+  }(document));
+  
+  //Google PlusOne
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+{% for page in paginator.posts %}
+{% if page.layout == 'post' %}
+<div class="post text">
+{% else %}
+<div class="post {{page.layout}}">
+{% endif %}
+  <span class="icon"><a href="{{ page.id }}">{{ page.title }}</a></span>
+  <span class="meta">
+    <a href="{{ page.id }}" class="timestamp">{{ page.date | date: '%d %b'}}</a>
+    <a href="{{ page.id }}/#disqus_thread" class="count">Comments</a>
+  </span>
+  {% if page.layout == 'quote' %}
+  <div class="body">
+    <blockquote>
+    {{ page.content }} 
+    </blockquote>
+  </div>
+  <div class="source">
+   {{ page.source | markdownify }}
+  </div>  
+  {% else %}
+  <span class="ttl"><a href="{{ page.id }}">{{ page.title }}</a></span>
+  <div class="body">
+    {{ page.content }}
+  </div>
+  {% endif %}
+
+  {% include twitter.html %}
+  {% include gplus.html %}
+  {% include facebook.html %}
+</div>
+{% endfor %}
