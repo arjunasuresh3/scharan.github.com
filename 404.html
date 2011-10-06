@@ -1,0 +1,40 @@
+---
+layout: post
+title: Page Not Found
+---
+<div id="page-not-found"> Ananlyzing error... </div>
+
+<script type="text/javascript">
+$(document).ready( function() {
+    var url = $(location).attr('href');
+    if( !url.match(/\/$/) ) { // Need this simplification to end URLs with '/'
+        url += '/';           // to simplify RegExp handling below, which assumes
+    }                         // that the wrong URLs will end in '/'
+
+    handleError = function( url ) {
+        var mat = null;
+        var pageUrl = /^http:\/\/{{site.domain}}(\/.*){0,1}\/page\/(\d+)/i;
+        var tagUrl = /^http:\/\/{{site.domain}}(\/.*){0,1}\/tag\/(.*)\//i;
+        var catUrl = /^http:\/\/{{site.domain}}(\/.*){0,1}\/category\/(.*)\//i;
+
+        if( mat = url.match( pageUrl ) ) {
+            go('/page'+mat.reverse()[0]);
+        } else if ( (mat = url.match( tagUrl )) || (mat = url.match( catUrl )) ) {
+           go('{{site.folder}}/tags.html#'+mat.reverse()[0].replace(/-/,' ')); // Handles a few pathological cases
+        }
+    return 0; // Failed to handle. Report.
+    }
+
+    go = function( url ) {
+        $(location).attr('href', url );
+    }
+
+    if( !handleError(url) ) {
+         var errorPrologue = "The page you requested: ";
+         var errorEpilogue = " was not found. You may <a href='{{site.folder}}/search'>search</a> for what you are looking.";
+         $("#page-not-found").html( errorPrologue + $(location).attr('href') + errorEpilogue );
+    }
+});
+</script>
+
+<div id="no-disqus"> </div>
