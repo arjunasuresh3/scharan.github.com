@@ -1,4 +1,4 @@
-markdown: kramdown
+markdown: rdiscount
 paginate: 5
 folder: /blog
 permalink: '/blog/:year/:month/:day/:title/'
