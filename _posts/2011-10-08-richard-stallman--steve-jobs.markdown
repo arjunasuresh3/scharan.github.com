@@ -22,4 +22,4 @@ And then there was light! Dave Winer, the guy credited with inventing RSS, first
 
 and followed up with [this](http://scripting.com/stories/2011/10/08/stallmanSteve.html). And I seem to agree - Stallman was right; and appropriately respectful too. Brilliant, well thought out & effectively communicating piece of writing from Dave.
 
-To relate with the concluding paragraph, it helps to be familiar with Apple's 'Think Different' ad campaign. A transcript of it is here: <http://saicharan.in/blog/2011/10/06/heres-to-the-crazy-ones/>
+To relate with the concluding paragraph from Stallman, it helps to be familiar with Apple's 'Think Different' ad campaign. A transcript of it is here: <http://saicharan.in/blog/2011/10/06/heres-to-the-crazy-ones/>
