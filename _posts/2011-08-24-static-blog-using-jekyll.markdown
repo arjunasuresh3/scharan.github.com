@@ -29,7 +29,7 @@ Update:
 * Adding pages for year, month and day was a ton more effort. I modified archive.rb from [josegonzalez](https://github.com/josegonzalez/josediazgonzalez.com/_plugins) and also customized his \_layout/archive\_*.html
 * Added an error handler with some JS to show my own custom error page.
 
-You can find the sources here: <https://github.com/scharan/saicharan.in>.
+You can find the sources here: <https://github.com/scharan/scharan.github.com>.
 
 _Update:_
 
