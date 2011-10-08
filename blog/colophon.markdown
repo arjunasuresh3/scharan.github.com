@@ -15,7 +15,7 @@ These tools are used to write, publish and serve the present site &mdash;
 #### Publishing
 - [Jekyll](http://jekyllrb.com) for static HTML generation - slow page serving and bloated functionality of various publishing platforms being the reason for a static site.
 - [Patched](https://github.com/scharan/jekyll/compare/handle-modified-timestamps#diff-0) version of [Jekyll](http://jekyllrb.com) to [minimize](/blog/2011/09/02/jekyll-feature-retain-modified-time-stamp/) the ftp-push footprint.
-- [Jose Gonzalez's](http://josediazgonzalez.com/) [archive plugin](https://github.com/josegonzalez/josediazgonzalez.com/blob/master/_plugins/archive.rb) for archive pages. The [Jekyll sources & templates are available on Github](https://github.com/scharan/saicharan.in/).
+- [Jose Gonzalez's](http://josediazgonzalez.com/) [archive plugin](https://github.com/josegonzalez/josediazgonzalez.com/blob/master/_plugins/archive.rb) for archive pages. The [Jekyll sources & templates are available on Github](https://github.com/scharan/scharan.github.com/).
 - [FTPSync](http://sourceforge.net/projects/ftpsync/) for incremental push to live site.
 
 #### Server
