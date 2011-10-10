@@ -673,3 +673,7 @@ div.source p:before {
     top: -32px;
     left: 192px;
 }
+
+p img {
+    padding-left: 0px;
+}

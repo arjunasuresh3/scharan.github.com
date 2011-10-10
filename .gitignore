@@ -4,3 +4,4 @@ robots.txt
 makefile
 .~
 *~
+.DS_Store

@@ -19,6 +19,8 @@ Future work: Going by [this thread](http://kerneltrap.org/mailarchive/git/2009/6
 
 scrolling needs to be handled separately in gitweb.js (the currently implementation depends on [jQuery](http://jquery.com)).
 
+Screenshot: <a href="/images/side-by-side-diff-with-scroll.jpg">![Gitweb side-by-side diff](/images/side-by-side-diff-with-scroll.jpg)</a>
+
 Gist: <https://gist.github.com/1274726>
 
 <script src="https://gist.github.com/1274726.js"> </script>
