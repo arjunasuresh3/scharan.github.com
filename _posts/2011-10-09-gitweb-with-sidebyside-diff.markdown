@@ -2,6 +2,8 @@
 layout: post
 title: Gitweb with 'side-by-side' diff
 tags: 
+- gitweb
+- diff
 date: 2011-10-09 23:20:40
 ---
 
