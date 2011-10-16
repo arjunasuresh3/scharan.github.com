@@ -571,7 +571,7 @@ p img {
 }
 
 #dsq-content #dsq-global-toolbar, #dsq-sort-by select {
-    visibility: hidden;
+    visibility: visible;
 }
 
 #dsq-reply.dsq-reply {
@@ -580,7 +580,7 @@ p img {
 }
 
 #disqus_thread h3 {
-    visibility: hidden;
+    visibility: visible;
 }
 
 .twtr-widget {
