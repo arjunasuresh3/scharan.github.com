@@ -160,7 +160,7 @@ span.meta a b {
     padding:7px;
     background:#ffbc00;
     text-decoration:none;
-    text-transform:lowercase;
+    text-transform:none;
 }
 
 .ttl a:hover {
