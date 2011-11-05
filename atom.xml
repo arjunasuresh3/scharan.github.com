@@ -17,6 +17,11 @@ layout: nil
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title | xml_escape }}</title>
+   <author>
+     <name>{{ site.author }}</name>
+     <email>{{ site.email }}</email>
+     <uri>http://{{ site.domain }}</uri>
+   </author>
    <link href="http://{{site.domain}}{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>http://{{site.domain}}{{ post.id }}</id>
