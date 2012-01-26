@@ -5,7 +5,7 @@ tags:
 date: 2012-01-26 11:55:41
 ---
 
-I have long been a loyal customer of Norton Internet Security product -- and I can vouch for its comprehensive, effective protection. However, when my most recent subscription expired, I decided to try other alternatives, that I can get via other subscriptions.
+I have long been a loyal customer of Norton Internet Security product -- and I can vouch for its comprehensive, effective protection. However, when my most recent subscription expired, due to my Grad-student budget I decided to try other alternatives that I had access to via other subscriptions, or free software.
 
 My ISP, Charter Inc. provides its users a security solution titled ['Charter Security Suite'](http://www.myaccount.charter.com/customers/supportgeneral.aspx?pagetype=1) which in turn is an offering from F-Secure. While I have been skeptic of anything other than Symantec/Mc Afee/Zone Alarm, I decided to give it a try. After all, F-Secure is a for-profit organization and I must be paying for it indirectly (by paying my ISP). 
 
