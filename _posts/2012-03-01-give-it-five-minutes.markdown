@@ -1,6 +1,7 @@
 ---
-layout: post
+layout: link
 title: Give it five minutes
+link: https://37signals.com/svn/posts/3124-give-it-five-minutes
 tags: 
 - 37signals
 - wisdom
