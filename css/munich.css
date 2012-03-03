@@ -179,7 +179,7 @@ span.meta a b {
     line-height:17px;
 }
 
-.post .body a, .item .text a, .chat ul li a, .quote .source a {
+.post .body a, .item .text a, .chat ul li a, .quote .source a, .link .source a {
     color:#ffbc00;
     text-decoration:none;
     font-variant:small-caps;
@@ -187,7 +187,7 @@ span.meta a b {
     font-size:11px;
 }
 
-.post .body a:hover, .item .text a:hover, .chat ul li a:hover, .quote .source a:hover {
+.post .body a:hover, .item .text a:hover, .chat ul li a:hover, .quote .source a:hover, .link .source a:hover {
     text-decoration:underline;
 }
 
@@ -536,6 +536,13 @@ p img {
 }
 
 .text .body {
+    font-family: Verdana, Tahoma;
+    font-size: 12px;
+    font-style: normal;
+    color: #D6DBDF;
+}
+
+.link .body {
     font-family: Verdana, Tahoma;
     font-size: 12px;
     font-style: normal;

@@ -36,6 +36,11 @@
   <div class="source">
    {{ page.source | markdownify }}
   </div>  
+  {% elsif page.layout == 'link' %}
+  <span class="ttl"><a href="{{ page.link }}"> {{ page.title }} → </a></span>
+  <div class="body">
+    {{ page.content }} 
+  </div>
   {% else %}
   <span class="ttl"><a href="{{ page.id }}">{{ page.title }}</a></span>
   <div class="body">
