@@ -10,6 +10,6 @@ I put together this site based on a few resources:
 * "https://github.com/mojombo/jekyll/wiki/template-data":https://github.com/mojombo/jekyll/wiki/template-data
 * "https://gist.github.com/227621":https://gist.github.com/227621 (for pagination).
 
-The content of _posts are my own and are my own. The rest of the content here is derived work and distributed as under the CC BY-NC 3.0 "license.":http://creativecommons.org/licenses/by-nc/3.0/ You are allowed to modify the templates and use them, but ensure attribution stays.
+The content of _posts are my own. The rest of the content here is derived work and distributed as under the CC BY-NC 3.0 "license.":http://creativecommons.org/licenses/by-nc/3.0/ You are allowed to modify the templates and use them, but ensure attribution stays.
 
 Comments and feedback welcome at the 'announcement' post: "http://saicharan.in/blog/2011/08/24/static-blog-using-jekyll/":http://saicharan.in/blog/2011/08/24/static-blog-using-jekyll/ and high-level overview of what it takes to run a static blog is in the "Colophon":http://saicharan.in/blog/colophon.html
