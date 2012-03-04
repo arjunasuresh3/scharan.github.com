@@ -3,7 +3,7 @@ layout: page
 title: Colophon
 ---
 
-Historically, this site was first built on [Blogger](http://sricharan-log.blogspot.com). Next, it ran off an self-hosted [Wordpress](http://wordpress.org) installation off [Nettigritty's](http://nettigritty.com).
+Historically, this site was first built on [Blogger](http://sricharan-log.blogspot.com). Next, it ran off a self-hosted [Wordpress](http://wordpress.org) installation off [Nettigritty's](http://nettigritty.com).
 
 These tools are used to write, publish and serve the present site &mdash;
 
