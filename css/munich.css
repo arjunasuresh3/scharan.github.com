@@ -481,32 +481,32 @@ ol.notes .answer_content {
 }
 
 #top {
-    -webkit-transform: rotate(-90deg); 
-    -moz-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-    position: relative;
-    top: -75px;
-    left: -350px;
+    position: absolute;
+    top: 140px;
+    left: 120px;
+    /* position: relative; */
+    /* top: -75px; */
+    /* left: -350px; */
 }
 
 ul#nav {
-    -o-transform: rotate(-90deg);
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
     position: relative;
     float: left;
     clear: left;
     margin-top: 10px;
 }
 
-#main, #bottom {
+#main {
     left: 15%;
 }
 
 #main {
-    position: relative;
-    top: -235px;
-    padding-top: 60px;
+    position: absolute;
+    top: 90px;
+    left: 500px;
+    /* position: relative; */
+    /* top: -235px; */
+    /* padding-top: 60px; */
 }
 
 #bottom {
@@ -522,7 +522,7 @@ ul#nav {
 }
 
 #bottom {
-    margin: 0 0 0 0;
+    margin: 20px 0 0 0;
 }
 
 #pagenav {
@@ -683,4 +683,29 @@ div.source p:before {
 
 p img {
     padding-left: 0px;
+}
+
+.post .ttl a, .ttlp, #nav li a:hover {
+    -webkit-border-bottom-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    -moz-border-radius-topright: 10px;
+}
+
+#header {
+    -webkit-transform: rotate(-90deg); 
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+ul#nav {
+    position: absolute;
+    width: 100px;
+    margin-left: 180px;
+    top: -125px;
+}
+
+.ttl a:hover {
+    background: orange;
 }
