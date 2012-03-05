@@ -107,7 +107,7 @@ span.icon a, .iconp {
     font-weight:normal;
     text-decoration:none;
     text-indent:-9999px;
-    background:url('http://static.tumblr.com/0prbykj/DzhjQBxSQ/icon.png') no-repeat;
+    background:url('/images/icon.png') no-repeat;
     height:27px;
     width:27px;
 }
