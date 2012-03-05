@@ -478,15 +478,13 @@ ol.notes .answer_content {
 
 #wrapper {
     width: 800px;
+    position: relative;
 }
 
 #top {
     position: absolute;
     top: 140px;
-    left: 120px;
-    /* position: relative; */
-    /* top: -75px; */
-    /* left: -350px; */
+    left: -120px;
 }
 
 ul#nav {
@@ -501,12 +499,9 @@ ul#nav {
 }
 
 #main {
-    position: absolute;
-    top: 90px;
-    left: 500px;
-    /* position: relative; */
-    /* top: -235px; */
-    /* padding-top: 60px; */
+    top: 65px;
+    left: 140px;
+    position: relative;
 }
 
 #bottom {
@@ -702,10 +697,20 @@ p img {
 ul#nav {
     position: absolute;
     width: 100px;
-    margin-left: 180px;
     top: -125px;
 }
 
 .ttl a:hover {
     background: orange;
+}
+
+#top {
+    height: 100px;
+    width: auto;
+}
+
+#navigation {
+    left: 80px;
+    top: 185px;
+    position: relative;
 }
