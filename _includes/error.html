@@ -9,9 +9,9 @@ $(document).ready( function() {
 
     handleError = function( url ) {
         var mat = null;
-        var pageUrl = /^http:\/\/{{site.domain}}(\/.*){0,1}\/page\/(\d+)/i;
-        var tagUrl = /^http:\/\/{{site.domain}}(\/.*){0,1}\/tag\/(.*)\//i;
-        var catUrl = /^http:\/\/{{site.domain}}(\/.*){0,1}\/category\/(.*)\//i;
+        var pageUrl = /^http:\/\/.*\.{{site.domain}}(\/.*){0,1}\/page[s]*\/(\d+)/i;
+        var tagUrl = /^http:\/\/.*\.{{site.domain}}(\/.*){0,1}\/tag[s]*\/(.*)\//i;
+        var catUrl = /^http:\/\/.*\.{{site.domain}}(\/.*){0,1}\/category\/(.*)\//i;
 
         if( mat = url.match( pageUrl ) ) {
             go('/page'+mat.reverse()[0]);
