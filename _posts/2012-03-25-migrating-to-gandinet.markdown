@@ -14,6 +14,7 @@ As of this writing, the transition has been successful. With Nettigritty not my 
 Since this website does not have too much traffic, for purposes of speed & availability, I decided to run it off Amazon S3. So, this page you are seeing is now served off S3.
 
 Getting here has not been completely straight forward, so the rest of this piece is a little chronicle of the extras:
+
 - Completely setup DNS entries on Gandi.net from scratch.
 - Without a hosting provider, this site does not have a real A record. So, people who visit http://saicharan.in would then get an error message. As naked domains cannot be DNS mapped with CNAME records, a little [digging](https://forums.aws.amazon.com/thread.jspa?threadID=55995) around revealed [wwwizer.com](http://wwwizer.com) as a free(!) service for this very purpose. However, I also found that Google Apps also provides this service for Apps enabled sites. Since this domain has also been setup for Google Apps, I simply set up the appropriate A records as listed at on the [dashboard page](https://www.google.com/a/cpanel/saicharan.in/DomainSettingsDomains)(warning: access restricted page). In summary, the DNS set up is:
     * saicharan.in.      10800   IN   A       216.239.36.21
