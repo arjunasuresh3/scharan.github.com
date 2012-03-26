@@ -22,7 +22,7 @@
 {% else %}
 <div class="post {{page.layout}}">
 {% endif %}
-  <span class="icon"><a href="{{ page.id }}">{{ page.title }}</a></span>
+  <span class="icon"><a href="{{ page.id }}/">{{ page.title }}</a></span>
   <span class="meta">
     <a href="{{ page.id }}" class="timestamp">{{ page.date | date: '%d %b'}}</a>
     <a href="{{ page.id }}/#disqus_thread" class="count">Comments</a>
@@ -42,7 +42,7 @@
     {{ page.content }} 
   </div>
   {% else %}
-  <span class="ttl"><a href="{{ page.id }}">{{ page.title }}</a></span>
+  <span class="ttl"><a href="{{ page.id }}/">{{ page.title }}</a></span>
   <div class="body">
     {{ page.content }}
   </div>
