@@ -3,7 +3,7 @@ layout: page
 title: Colophon
 ---
 
-Historically, this site was first built on [Blogger](http://sricharan-log.blogspot.com). Next, it ran off a self-hosted [Wordpress](http://wordpress.org) installation off [Nettigritty's](http://nettigritty.com).
+Historically, this site was first built on [Blogger](http://sricharan-log.blogspot.com). Next, it ran off a self-hosted [Wordpress](http://wordpress.org) installation off [Nettigritty's](http://nettigritty.com). Currently, this site is registered with [Gandi.net](http://gandi.net) & served off [Amazon's S3](https://aws.amazon.com/s3).
 
 These tools are used to write, publish and serve the present site &mdash;
 
@@ -19,7 +19,8 @@ These tools are used to write, publish and serve the present site &mdash;
 - [FTPSync](http://sourceforge.net/projects/ftpsync/) for incremental push to live site.
 
 #### Server
-- Static files hosted on [Nettigritty's](http://nettigritty.com) servers &mdash; they are a fantastic, affordable [domain registrar](http://domains.nettigritty.com/) and [hosting provider](http://www.nettigritty.com/linuxwebhosting.php). You should try them!
+- Static files hosted on [Amazon's S3](https://aws.amazon.com/s3). 
+    * Previously: [Nettigritty's](http://nettigritty.com) servers &mdash; they are a fantastic, affordable [domain registrar](http://domains.nettigritty.com/) and [hosting provider](http://www.nettigritty.com/linuxwebhosting.php). You should try them!
 - Apache webserver.
 - [Github](https://github.com/scharan/munich) & [Google Code](http://code.google.com/) as CDNs.
 - Comments are served out by [Disqus](http://disqus.com).
