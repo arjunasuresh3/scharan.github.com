@@ -17,14 +17,19 @@ Among the most elegant implementations is the string copy function (assuming you
 void strcpy(char* src, char* dest){
 while(*dest++ = *src++);
 }</pre>
+<br />
+
 But I have often wondered what happens at the assembler such *s gets you only a single byte/character. So here is a simple program that explores this - but in string compare:
 <pre class="brush: cpp">int main(){
     char *a="String One", *b="String Two";
     while(*a++==*b++);
 return 0;
 }</pre>
+<br />
+
 I compiled this with 'gcc -S' option and got the following assembly code:
-<pre class="brush: plain">        .file	"testpointer.c"
+<pre class="brush: plain linenums">        
+    .file	"testpointer.c"
 	.def	___main;	.scl	2;	.type	32;	.endef
 	.section .rdata,"dr"
 LC0:
@@ -56,12 +61,19 @@ L2:
 	movl	$0, %eax
 	leave
 	ret</pre>
+<br />
+
 Line 24: "cmpb %al, %dl" says it all. compare <strong>Lower</strong> <strong>Byte</strong> of register 'a' and register 'd'. Now I can be in peace ;)
 
+
+<br />
+<br />
 References:
+<br />
+1. <a href="http://www.codeguru.com/cpp/cpp/cpp_mfc/tutorials/article.php/c9415">http://www.codeguru.com/cpp/cpp/cpp_mfc/tutorials/article.php/c9415</a>
 
-<a href="http://www.codeguru.com/cpp/cpp/cpp_mfc/tutorials/article.php/c9415">http://www.codeguru.com/cpp/cpp/cpp_mfc/tutorials/article.php/c9415</a>
+<br />
+2. <a href="http://www3.itu.edu.tr/~kesgin/mul06/intel/instr/sete_setz.html">http://www3.itu.edu.tr/~kesgin/mul06/intel/instr/sete_setz.html</a>
 
-<a href="http://www3.itu.edu.tr/~kesgin/mul06/intel/instr/sete_setz.html">http://www3.itu.edu.tr/~kesgin/mul06/intel/instr/sete_setz.html</a>
-
-<a href="http://homepage.mac.com/randyhyde/webster.cs.ucr.edu/www.artofasm.com/DOS/ch09/CH09-6.html#HEADING6-83">http://homepage.mac.com/randyhyde/webster.cs.ucr.edu/www.artofasm.com/DOS/ch09/CH09-6.html#HEADING6-83</a>
+<br />
+3. <a  href="http://homepage.mac.com/randyhyde/webster.cs.ucr.edu/www.artofasm.com/DOS/ch09/CH09-6.html#HEADING6-83">http://homepage.mac.com/randyhyde/webster.cs.ucr.edu/www.artofasm.com/DOS/ch09/CH09-6.html#HEADING6-83</a>
