@@ -10,7 +10,8 @@ date: 2012-03-29 18:06:09
 Since this morning, the memory of a computer game that I played as a kid kept surfacing in my head. Weirdly, the name kept eluding me; until a Google search for ['computer clay game'](https://www.google.com/search?q=computer+clay+game) turned up the one and only 'Neverhood Chronicles' :)
 
 Here is an image sourced from [Wikipedia](http://en.wikipedia.org/wiki/The_Neverhood):
-[![The Neverhood](http://upload.wikimedia.org/wikipedia/en/c/cc/The_Neverhood.jpg "The Neverhood!")](http://en.wikipedia.org/wiki/The_Neverhood)
+
+[![The Neverhood](http://upload.wikimedia.org/wikipedia/en/1/12/The_Neverhood_-_box_art.jpg "The Neverhood!")](http://en.wikipedia.org/wiki/The_Neverhood)
 
 The opening line is unassumingly simple: 
 
