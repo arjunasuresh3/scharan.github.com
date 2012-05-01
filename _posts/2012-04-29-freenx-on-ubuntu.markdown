@@ -23,3 +23,5 @@ Finally, to access the GNOME session, I had to change the configuration as [sugg
     CommandStartGnome = "/usr/bin/gnome-session --session=gnome-classic"
 
 The screen resolution with NX is remarkably crisp & clear. Now I can get to work on remote GUI without squinting!
+
+Update: To access an existing X11 session, choose 'Shadow' as the Desktop type. (See [this link](http://serverfault.com/a/44326/88592) for details).
