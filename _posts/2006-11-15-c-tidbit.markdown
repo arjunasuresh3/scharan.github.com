@@ -14,7 +14,8 @@ tags:
 - tidbit
 type: post
 status: publish
+date: 2006-11-15 08:21:00-08:00
 ---
 The assignment operator returns something! In the case of a character, it returns the character that was assigned. So, it is useful to write code this way:
 
-while ((to[i] = from[i]) != '\0')
+    while ((to[i] = from[i]) != '\0')
