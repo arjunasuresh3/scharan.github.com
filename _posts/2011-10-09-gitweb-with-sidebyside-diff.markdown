@@ -7,6 +7,8 @@ tags:
 date: 2011-10-09 23:20:40
 ---
 
+**Update**: With git v1.7.9.5, this hack below is not needed anymore. Gitweb comes with sidebyside diff.
+
 Bonus: Simultaneously scroll left and right files with overflow.
 
 Dependencies: [jQuery](http://jquery.com/)
