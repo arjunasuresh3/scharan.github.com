@@ -93,7 +93,7 @@ body {
 /* CONTENT */
 
 #main {
-    width:600px;
+    width:800px;
     margin:0 auto;
 }
 
@@ -477,7 +477,7 @@ ol.notes .answer_content {
 }
 
 #wrapper {
-    width: 800px;
+    width: 1000px;
     position: relative;
 }
 
