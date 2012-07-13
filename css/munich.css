@@ -745,9 +745,9 @@ li.L0, li.L1, li.L2, li.L3, li.L4, li.L5, li.L6, li.L7, li.L8 {
 
     #header {
         -webkit-transform: none;
-        -moz-transform: rotate(-90deg);
-        -o-transform: rotate(-90deg);
-        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+        -moz-transform: none;
+        -o-transform: none;
+        filter: none;
         top: 0px;
     }
 
