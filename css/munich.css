@@ -7,7 +7,6 @@ a img, img a {border:none;}
 iframe {top:7px !important;}
 
 #wrapper {
-    width:600px;
     margin:0 auto;
 }
 
@@ -21,7 +20,9 @@ body {
 }
 
 #header {
-    float:left;
+    float: left;
+    position: relative;
+    top: 90px;
 }
 
 #header h1 a, #header h1 a:hover {
@@ -61,20 +62,12 @@ body {
     text-decoration:underline;
 }
 
-#nav {
-    float:right;
-    margin-top:32px;
-    margin-left: -32px;
-    text-align:left;
-}
-
 #nav li {
     line-height: 40px;
     display:inline-block;
     list-style:none;
     margin-left:22px;
 }
-
 
 #nav li a {
     color:#ffbc00;
@@ -93,7 +86,8 @@ body {
 /* CONTENT */
 
 #main {
-    width:800px;
+    max-width: 800px;
+    /* min-width: 320px; */
     margin:0 auto;
 }
 
@@ -477,25 +471,15 @@ ol.notes .answer_content {
 }
 
 #wrapper {
-    width: 1000px;
+    min-width: 320px;
+    max-width: 1000px;
     position: relative;
 }
 
 #top {
     position: absolute;
-    top: 140px;
+    top: 65px;
     left: -120px;
-}
-
-ul#nav {
-    position: relative;
-    float: left;
-    clear: left;
-    margin-top: 10px;
-}
-
-#main {
-    left: 15%;
 }
 
 #main {
@@ -694,28 +678,91 @@ p img {
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
-ul#nav {
-    position: absolute;
-    width: 100px;
-    top: -125px;
-}
-
 .ttl a:hover {
     background: orange;
 }
 
 #top {
-    height: 100px;
+    height: 100%;
     width: auto;
 }
 
+ul#nav {
+    max-width: 100px;
+}
+
 #navigation {
-    left: 80px;
-    top: 185px;
     position: relative;
+    max-width: 100px;
+    max-height: 40px;
+    left: 40px;
+    top: 85px;
 }
 
 /* Override prettify.css: number every line. */
 li.L0, li.L1, li.L2, li.L3, li.L4, li.L5, li.L6, li.L7, li.L8 { 
     list-style-type: decimal !important;
+}
+
+@media (max-width: 520px) {
+    #navigation {
+        display: none;
+    }
+
+    #top {
+        left: 10px !important;
+    }
+    
+    #header h1 a, #header h1 a:hover {
+        font-size: 28px;
+    }
+
+    #header div {
+        display: none;
+    }
+
+    #main {
+        top: 60px !important;
+    }
+
+    .post .ttl a {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1024px) {
+    span.icon, span.meta {
+        display: none;
+    }
+
+    #main {
+        left: 10px;
+        right: 10px;
+        top: 100px;
+        float: left;
+        max-width: 95%;
+    }
+
+    #header {
+        -webkit-transform: none;
+        -moz-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+        top: 0px;
+    }
+
+    #top {
+        top: 10px;
+        left: 20px;
+        margin: 0;
+    }
+
+    #navigation, ul#nav {
+        max-width: 100%;
+    }
+
+    #navigation {
+        left: -10px;
+        top: 90px;
+    }
 }
