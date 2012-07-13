@@ -1,0 +1,11 @@
+#top {
+    left: -40px;
+    top: -35px;
+}
+
+@media (max-width: 1024px) {
+    #top {
+        left: 0px;
+        top: 0px;
+    }
+}
