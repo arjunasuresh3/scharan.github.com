@@ -752,6 +752,10 @@ li.L0, li.L1, li.L2, li.L3, li.L4, li.L5, li.L6, li.L7, li.L8 {
     .post .ttl a {
         font-size: 15px;
     }
+
+    .post pre {
+        word-wrap: break-word;
+    }
 }
 
 @media (max-width: 1024px) {
