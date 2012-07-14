@@ -120,9 +120,9 @@ span.meta a {
 }
 
 span.meta a.timestamp {
-    width: 40px;
+    width: 100px;
     top: 30px;
-    left: -54px;
+    left: -115px;
 }
 
 span.meta .count {
