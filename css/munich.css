@@ -705,6 +705,10 @@ li.L0, li.L1, li.L2, li.L3, li.L4, li.L5, li.L6, li.L7, li.L8 {
 }
 
 @media (max-width: 520px) {
+    #hm {
+        display: none !important;
+    }
+
     #navigation {
         left: 0px !important;
         top: 45px !important;
@@ -732,7 +736,7 @@ li.L0, li.L1, li.L2, li.L3, li.L4, li.L5, li.L6, li.L7, li.L8 {
     }
 
     #main {
-        top: 60px !important;
+        top: 40px !important;
     }
 
     .post .ttl a {
