@@ -255,7 +255,7 @@ span.meta a b {
 }
 
 .quote .body {
-    font: normal 13px/1.6em Verdana;
+    font: normal 13px/1.6em Verdana, Tahoma, Ubuntu, sans-serif;
 }
 
 .quote span.icon a {
@@ -502,19 +502,19 @@ p img {
 }
 
 .text .body {
-    font: normal 13px/1.6em Verdana;
+    font: normal 13px/1.6em Verdana, Tahoma, Ubuntu, sans-serif;
     font-style: normal;
     color: #D6DBDF;
 }
 
 .link .body {
-    font: normal 13px/1.6em Verdana;
+    font: normal 13px/1.6em Verdana, Tahoma, Ubuntu, sans-serif;
     font-style: normal;
     color: #D6DBDF;
 }
 
 .post .source {
-    font: normal 13px/1.6em Verdana;
+    font: normal 13px/1.6em Verdana, Tahoma, Ubuntu, sans-serif;
 }
 
 .chat ul li {
@@ -687,7 +687,7 @@ li.L1, li.L3, li.L5, li.L7, li.L9 {
 
 /* Disqus Customizations */
 #disqus_thread {
-    font: normal 13px/1.6em Verdana;
+    font: normal 13px/1.6em Verdana, Tahoma, Ubuntu, sans-serif;
     font-style: normal;
     color: #D6DBDF;
 }
@@ -703,7 +703,7 @@ li.L1, li.L3, li.L5, li.L7, li.L9 {
 }
 
 .dsq-commenter-name, #dsq-account-dropdown a {
-    font: normal 13px/1.6em Verdana;
+    font: normal 13px/1.6em Verdana, Tahoma, Ubuntu, sans-serif;
     font-style: normal;
     color: #FFBC00;
 }
@@ -713,7 +713,7 @@ li.L1, li.L3, li.L5, li.L7, li.L9 {
 }
 
 #disqus_thread #posts {
-    font: normal 13px/1.6em Verdana !important;
+    font: normal 13px/1.6em Verdana, Tahoma, Ubuntu, sans-serif !important;
     color: #D6DBDF;
 }
 
@@ -727,7 +727,7 @@ li.L1, li.L3, li.L5, li.L7, li.L9 {
 }
 
 div.post-content {
-    font: normal 13px/1.6em Verdana !important;
+    font: normal 13px/1.6em Verdana, Tahoma, Ubuntu, sans-serif !important;
     color: #D6DBDF;
 }
 
