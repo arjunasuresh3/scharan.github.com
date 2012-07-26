@@ -203,7 +203,7 @@ span.meta a b {
 }
 
 .post ol li {
-    margin-bottom:3px;
+    margin-bottom: 0px;
 }
 
 .post blockquote {
@@ -387,21 +387,6 @@ li.even {
     max-width: 100%;
 }
 
-#disqus_thread {
-    font-family:"Lucida Grande", "Lucida Sans Unicode";
-    font-size:11px;
-    color:#fff;
-    line-height:17px;
-}
-
-#disqus_thread a {
-    color:#ffbc00;
-    text-decoration:none;
-    font-variant:small-caps;
-    font-family:Georgia;
-    font-size:11px;
-}
-
 ol.notes {
     font-family:"Lucida Grande", "Lucida Sans Unicode";
     font-size:11px;
@@ -537,33 +522,10 @@ p img {
     color: #D6DBDF;
 }
 
-#disqus_thread {
-    font: normal 13px/1.6em Verdana;
-    font-style: normal;
-    color: #D6DBDF;
-}
-
-#dsq-content #dsq-global-toolbar, #dsq-sort-by select {
-    visibility: visible;
-}
-
-#dsq-reply.dsq-reply {
-    border-top: 1px solid #FFBC00;
-    clear: both;
-}
-
-#disqus_thread h3 {
-    visibility: visible;
-}
-
 .twtr-widget {
     width: 250px;
     height: 300px;
     border: 2px solid #FFBC00;
-}
-
-#dsq-subscribe {
-    visibility: hidden;
 }
 
 span.meta .note {
@@ -571,18 +533,24 @@ span.meta .note {
 }
 
 code {
-    font: normal 13px/1.6em Consolas, 'Ubuntu Monospace', monospace;
+    font: normal 13px/1.6em Consolas, Menlo, Monaco, 'Ubuntu Monospace', monospace;
     background-color: rgba(66, 65, 65, 0.62);
+    border: 1px solid #4D4D4D;
     border-radius: 3px;
     padding: 2px;
 }
 
-pre.prettyprint {
+pre.prettyprint, code.prettyprint {
     overflow: auto;
-    background-color: white;
-    margin: 0 0 0 0;
-    font-size: 11px;
+    background-color: rgba(66, 65, 65, 0.62) !important;
+    margin: 0 0 0 0 !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    padding-left: 3px !important;
+    padding-right: 3px !important;
     border: none !important;
+    font: normal 13px/1.6em Consolas, Menlo, Monaco, 'Ubuntu Monospace', monospace;
+    border-radius: 3px !important;
 }
 
 #nav li a {
@@ -611,12 +579,13 @@ hr.flourish::after {
 }
 
 .post pre {
+    border: 1px solid #4D4D4D !important;
     background-color: rgba(66, 65, 65, 0.62);
     border-radius: 3px;
     padding-left: 3px;
     padding-right: 3px;
     margin: 0px;
-    font: normal 13px/1.6em Consolas, 'Ubuntu Monospace', monospace;
+    font: normal 13px/1.6em Consolas, Menlo, Monaco,'Ubuntu Monospace', monospace;
     word-wrap: break-word;
 }
 
@@ -701,8 +670,13 @@ pre code {
 }
 
 /* Override prettify.css: number every line. */
-li.L0, li.L1, li.L2, li.L3, li.L4, li.L5, li.L6, li.L7, li.L8 { 
+li.L0, li.L1, li.L2, li.L3, li.L4, li.L5, li.L6, li.L7, li.L8, li.L9 {
     list-style-type: decimal !important;
+    border-radius: 3px;
+}
+
+li.L1, li.L3, li.L5, li.L7, li.L9 {
+    background: #3F3E3E !important;
 }
 
 .inf {
@@ -711,6 +685,76 @@ li.L0, li.L1, li.L2, li.L3, li.L4, li.L5, li.L6, li.L7, li.L8 {
     font-weight: bold;
 }
 
+/* Disqus Customizations */
+#disqus_thread {
+    font: normal 13px/1.6em Verdana;
+    font-style: normal;
+    color: #D6DBDF;
+}
+
+#disqus_thread a {
+    color: #ffbc00;
+    border-bottom: 1px dotted #6C6A67;
+    text-decoration: none;
+}
+
+#disqus_thread a:hover {
+    border-bottom: 1px solid;
+}
+
+.dsq-commenter-name, #dsq-account-dropdown a {
+    font: normal 13px/1.6em Verdana;
+    font-style: normal;
+    color: #FFBC00;
+}
+
+#dsq-content #dsq-global-toolbar, div#comments #dsq-sort-by select {
+    visibility: visible;
+}
+
+#disqus_thread #posts {
+    font: normal 13px/1.6em Verdana !important;
+    color: #D6DBDF;
+}
+
+#dsq-reply.dsq-reply {
+    border-top: 1px solid #FFBC00;
+    clear: both;
+}
+
+#disqus_thread h3 {
+    visibility: visible;
+}
+
+div.post-content {
+    font: normal 13px/1.6em Verdana !important;
+    color: #D6DBDF;
+}
+
+div.post-content header .name {
+    color: #FFBC00 !important;
+}
+
+#dsq-subscribe {
+    visibility: hidden;
+}
+
+/* Override Gist embeds from appspot.com */
+.gist-it-gist .gist-file .gist-data, .gister-gist .gist-file .gist-data {
+    background-color: rgba(66, 65, 65, 0.62) !important;
+    border: 1px solid #4D4D4D !important;
+    border-radius: 3px !important;
+}
+
+.gist-it-gist .gist-file .gist-data pre, .gister-gist .gist-file .gist-data pre {
+    font: normal 13px/1.6em Consolas, Monaco, 'Ubuntu Monospace', monospace !important;
+}
+
+.gist-it-gist .gist-file, .gister-gist .gist-file {
+    border: none !important;
+}
+
+/* Smaller screen size customizations. */
 @media (max-width: 520px) {
     #hm {
         display: none !important;
