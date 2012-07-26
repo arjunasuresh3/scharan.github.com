@@ -87,7 +87,6 @@ body {
 
 #main {
     max-width: 800px;
-    /* min-width: 320px; */
     margin:0 auto;
 }
 
@@ -150,7 +149,7 @@ span.meta a b {
     font-family:Georgia;
     font-weight:normal;
     color:#262626;
-    font-size:21px;
+    font-size:18px/1.4em;
     padding:7px;
     background:#ffbc00;
     text-decoration:none;
@@ -176,13 +175,12 @@ span.meta a b {
 .post .body a, .item .text a, .chat ul li a, .quote .source a, .link .source a {
     color:#ffbc00;
     text-decoration:none;
-    font-variant:small-caps;
-    font-family:Georgia;
-    font-size:11px;
+    border-bottom: 1px dotted #6C6A67;
 }
 
 .post .body a:hover, .item .text a:hover, .chat ul li a:hover, .quote .source a:hover, .link .source a:hover {
-    text-decoration:underline;
+    border-color: #ffbc00;
+    border-bottom: 1px solid;
 }
 
 
@@ -257,9 +255,7 @@ span.meta a b {
 }
 
 .quote .body {
-    font-family:Georgia;
-    font-size:18px;
-    line-height:25px;
+    font: normal 13px/1.6em Verdana;
 }
 
 .quote span.icon a {
@@ -521,43 +517,28 @@ p img {
 }
 
 .text .body {
-    font-family: Verdana, Tahoma;
-    font-size: 12px;
+    font: normal 13px/1.6em Verdana;
     font-style: normal;
     color: #D6DBDF;
 }
 
 .link .body {
-    font-family: Verdana, Tahoma;
-    font-size: 12px;
+    font: normal 13px/1.6em Verdana;
     font-style: normal;
     color: #D6DBDF;
 }
 
 .post .source {
-    font-family: Verdana, Tahoma;
+    font: normal 13px/1.6em Verdana;
 }
 
 .chat ul li {
-    font-family: Verdana, Tahoma;
     font-size: 10px;
     color: #D6DBDF;
 }
 
-.post .body a {
-    font-size: 14px;
-    font-style: normal;
-}
-
-.post .ttl a, .ttlp{
-    padding: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
 #disqus_thread {
-    font-family: Verdana, Tahoma, sans-serif;
-    font-size: 10px;
+    font: normal 13px/1.6em Verdana;
     font-style: normal;
     color: #D6DBDF;
 }
@@ -590,7 +571,10 @@ span.meta .note {
 }
 
 code {
-    font-size: 11px;
+    font: normal 13px/1.6em Consolas, 'Ubuntu Monospace', monospace;
+    background-color: rgba(66, 65, 65, 0.62);
+    border-radius: 3px;
+    padding: 2px;
 }
 
 pre.prettyprint {
@@ -598,6 +582,7 @@ pre.prettyprint {
     background-color: white;
     margin: 0 0 0 0;
     font-size: 11px;
+    border: none !important;
 }
 
 #nav li a {
@@ -626,7 +611,13 @@ hr.flourish::after {
 }
 
 .post pre {
-    font-size: 11px;
+    background-color: rgba(66, 65, 65, 0.62);
+    border-radius: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin: 0px;
+    font: normal 13px/1.6em Consolas, 'Ubuntu Monospace', monospace;
+    word-wrap: break-word;
 }
 
 .quote .source {
@@ -701,6 +692,12 @@ ul#nav {
     max-height: 40px;
     left: 50px;
     top: 85px;
+}
+
+pre code {
+    border: none;
+    padding: 0px;
+    background-color: transparent;
 }
 
 /* Override prettify.css: number every line. */
