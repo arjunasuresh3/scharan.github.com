@@ -733,7 +733,12 @@ a img {
     color: #D6DBDF;
 }
 
-#disqus_thread a {
+#a_comments {
+    position: relative;
+    float: right;
+}
+
+#disqus_thread a, #a_comments {
     color: #ffbc00;
     border-bottom: 1px dotted #6C6A67;
     text-decoration: none;
@@ -743,7 +748,7 @@ a img {
     border-bottom: 1px solid;
 }
 
-.dsq-commenter-name, #dsq-account-dropdown a {
+.dsq-commenter-name, #dsq-account-dropdown a, #a_comments {
     font: normal 13px/1.6em Verdana, Tahoma, Ubuntu, sans-serif;
     font-style: normal;
     color: #FFBC00;

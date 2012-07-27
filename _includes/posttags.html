@@ -8,6 +8,8 @@
     {% for cat in page.categories %}
     <a href="{{site.folder}}/tags.html#{{ cat | downcase }}">{{ cat }}</a>&nbsp; &middot; &nbsp;
     {% endfor %}
+
+    {% include comments.html %}
   </div>
 </div>
 {% endif %}
