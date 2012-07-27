@@ -150,7 +150,7 @@ span.meta a b {
     font-weight:normal;
     color:#262626;
     font-size:18px/1.4em;
-    padding:7px;
+    padding: 5px 7px 5px 7px;
     background:#ffbc00;
     text-decoration:none;
     text-transform:none;
@@ -323,26 +323,61 @@ li.even {
     top:-2px;
 }
 
-#older:hover, #newer:hover {
-    background:#ffc523;
-}
-
 #older {
+    z-index: 2;
     float:left;
     text-align:left;
     left:0px;
 
     border: none;
-    border-radius: 25px 0px 0px 25px;
+    border-radius: 5px 5px 5px 5px;
 }
 
 #newer {
+    z-index: 2;
     float:right;
     text-align:right;
     right:10px;
 
     border: none;
-    border-radius: 0px 25px 25px 0px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+/* Inspiration from Readability.com's CSS for 'Original Page' */
+#newer:after {
+    background-color: #FFBC00;
+    content: "";
+    display: inline-block;
+    height: 2.2em;
+    position: absolute;
+    right: -10px;
+    top: .18em;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    width: 2.2em;
+    z-index: -1;
+    border-radius: 3px;
+}
+
+#older:before {
+    background-color: #FFBC00;
+    content: "";
+    display: inline-block;
+    height: 2.2em;
+    position: absolute;
+    left: -10px;
+    top: .18em;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 2.2em;
+    z-index: -1;
+    border-radius: 3px;
 }
 
 #pages {
@@ -632,10 +667,11 @@ p img {
 
 .post .ttl a, .ttlp, #nav li a:hover {
     border: none;
-    border-radius: 0px 10px 0px 10px;
+    border-radius: 2px 10px 2px 10px;
 }
 
 #header {
+    z-index: 2; /* Sometimes, the top of the header is not clickable. This fixes it. */
     -webkit-transform: rotate(-90deg); 
     -moz-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
@@ -656,6 +692,7 @@ ul#nav {
 }
 
 #navigation {
+    z-index: 2; /* Sometimes, the top of the header is not clickable. This fixes it. */
     position: relative;
     max-width: 100px;
     max-height: 40px;
@@ -683,6 +720,10 @@ li.L1, li.L3, li.L5, li.L7, li.L9 {
     color: orange;
     font-size: 14pt;
     font-weight: bold;
+}
+
+a img {
+    border-bottom: none;
 }
 
 /* Disqus Customizations */
