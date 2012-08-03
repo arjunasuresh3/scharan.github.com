@@ -569,7 +569,7 @@ span.meta .note {
 }
 
 code {
-    font: normal 13px/1.6em Consolas, Menlo, Monaco, 'Ubuntu Monospace', monospace;
+    font: normal 13px/1.6em Consolas, Menlo, Monaco, 'Ubuntu Mono', monospace;
     background-color: rgba(66, 65, 65, 0.62);
     border: 1px solid #4D4D4D;
     border-radius: 3px;
@@ -585,7 +585,7 @@ pre.prettyprint, code.prettyprint {
     padding-left: 3px !important;
     padding-right: 3px !important;
     border: none !important;
-    font: normal 13px/1.6em Consolas, Menlo, Monaco, 'Ubuntu Monospace', monospace;
+    font: normal 13px/1.6em Consolas, Menlo, Monaco, 'Ubuntu Mono', monospace;
     border-radius: 3px !important;
 }
 
@@ -621,7 +621,7 @@ hr.flourish::after {
     padding-left: 3px;
     padding-right: 3px;
     margin: 0px;
-    font: normal 13px/1.6em Consolas, Menlo, Monaco,'Ubuntu Monospace', monospace;
+    font: normal 13px/1.6em Consolas, Menlo, Monaco,'Ubuntu Mono', monospace;
     word-wrap: break-word;
 }
 
@@ -794,7 +794,7 @@ div.post-content header .name {
 }
 
 .gist-it-gist .gist-file .gist-data pre, .gister-gist .gist-file .gist-data pre {
-    font: normal 13px/1.6em Consolas, Monaco, 'Ubuntu Monospace', monospace !important;
+    font: normal 13px/1.6em Consolas, Monaco, 'Ubuntu Mono', monospace !important;
 }
 
 .gist-it-gist .gist-file, .gister-gist .gist-file {
