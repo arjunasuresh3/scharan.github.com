@@ -10,7 +10,7 @@ date: 2012-07-31 17:09:11
 
 Gmail's contact details includes provision to add usernames from other IM networks. Having this in one place is very handy on the Android phone, for instance. 
 
-Naively exporting Skype's address book via Skype > Contacts > Advanced > Backup contacts to file & importing them into Gmail isn't sufficient. This process imports the contact information alright, but not the skype names, defeating the purpose of the import.
+Naïvely exporting Skype's address book via Skype > Contacts > Advanced > Backup contacts to file & importing them into Gmail isn't sufficient. This process imports the contact information alright, but not the skype names, defeating the purpose of the import.
 
 A little digging up reveals the culprit. Skype uses the vCard v3.0 Property `X-SKYPE-USERNAME:`, while Gmail expects `X-SKYPE:`. So, here is some wizardry to fix this (on a Linux/Unix machine).
 
