@@ -71,7 +71,7 @@ body {
 
 #nav li a {
     color:#ffbc00;
-    font-family: "Gill Sans", "Gill Sans MT", Verdana, sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", Verdana, Tahoma, sans-serif;
     text-transform: uppercase;
     text-decoration: none;
     font-weight: none;
@@ -147,7 +147,7 @@ span.meta a b {
 }
 
 .post .ttl a, .ttlp {
-    font-family: "Gill Sans", "Gill Sans MT", Verdana, sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", Verdana, Tahoma, sans-serif;
     font-weight:normal;
     color:#262626;
     font-size:18px/1.4em;
