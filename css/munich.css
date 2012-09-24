@@ -230,7 +230,7 @@ span.meta a b {
 }
 
 .source a:hover {
-    text-decoration:underline;
+    text-decoration: none;
 }
 
 #daybox {
