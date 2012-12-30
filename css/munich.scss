@@ -697,7 +697,7 @@ p img {
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); 
+    -ms-transform: rotate(-90deg);
 }
 
 .ttl a:hover {
@@ -883,7 +883,7 @@ div.post-content {
         -webkit-transform: none;
         -moz-transform: none;
         -o-transform: none;
-        filter: none;
+        -ms-transform: none;
         top: 0px; 
     }
     #top {
