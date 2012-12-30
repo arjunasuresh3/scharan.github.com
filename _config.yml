@@ -35,7 +35,7 @@ asset_bundler:
     css: false #yui-compressor -o :outfile :infile
   base_path: /css/
   server_url:
-  remove_bundled: false
+  remove_bundled: true
   dev: false
   markup_templates:
     js: "<script async type='text/javascript' src='{{url}}'></script>\n"

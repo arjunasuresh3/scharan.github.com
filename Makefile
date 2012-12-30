@@ -8,7 +8,7 @@ AWS_S3_PATH = s3://www.saicharan.in
 #AWS_S3_PATH = s3://saicharan.in
 #AWS_S3_PATH = s3://s3.saicharan.in
 #AWS_S3_PATH = s3://static.saicharan.in
-SYNC_CMD = s3cmd sync --exclude=makefile  _site/ $(AWS_S3_PATH) #--reduced-redundancy
+SYNC_CMD = s3cmd sync --exclude=Makefile CNAME --delete-removed _site/ $(AWS_S3_PATH) #--reduced-redundancy
 
 all:
 	cd $(REPO_DIR) && jekyll

@@ -1,8 +1,6 @@
-<!-- Markdown does not have option to add target attribute 
-     & this cannot be done using CSS, since this is not a 
-     visual style. So, use jQuery for all absolute URLs! 
--->
-<script type="text/javascript">
+/* Markdown does not have option to add target attribute 
+   and this cannot be done using CSS, since this is not a 
+   visual style. So, use jQuery for all absolute URLs! */
 $(document).ready( function(){
    $.each( $("a").filter( function(){ 
                       try { // In case the anchor does not have href.
@@ -15,11 +13,8 @@ $(document).ready( function(){
                $(tag).attr('target', '_blank');
            });
 });
-</script>
 
-<script type="text/javascript">
 // This adds x comments & y reactions. Based on Tumblr theme: munichtheme.tumblr.com
-//<![CDATA[
 (function() {
     var links = document.getElementsByTagName('a');
     var query = '?';
@@ -30,6 +25,4 @@ $(document).ready( function(){
     }
     document.write('<script charset="utf-8" type="text/javascript" src="https://disqus.com/forums/{{site.disqus.name}}/get_num_replies.js' + query + '"></' + 'script>');
 })();
-//]]>
-</script>
 
