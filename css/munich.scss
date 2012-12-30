@@ -1,11 +1,14 @@
 ---
 ---
 
+$noticia-font-family: "Noticia Text", serif;
+$gentium-font-family: "Gentium Book Basic", serif;
+
 $header-font-family: Georgia;
 $header-font-size: 60px;
 
-$default-font-family: Verdana, Tahoma, sans-serif;
-$default-font-size: 12px;
+$default-font-family: $gentium-font-family, serif, Verdana, Tahoma, sans-serif;
+$default-font-size: 14px;
 $default-line-height: 1.6em;
 
 $content-font-family: $default-font-family;
@@ -17,17 +20,16 @@ $content-font-family-mono: Consolas, Menlo, Monaco, "Ubuntu Mono", monospace;
 $content-font-size-mono: 12px;
 $content-font-mono: normal 13px / 1.6em $content-font-family-mono monospace !important;
 
-$noticia-font-family: "Noticia Text", serif;
-
 $nav-li-a-font-family: $noticia-font-family;
 $nav-li-a-font-size: 12px;
 $nav-li-a-color: #ffbc00;
 $nav-li-a-hover-color: #262626;
 $nav-li-a-hover-background: #ffbc00;
 
-$title-font-family: $noticia-font-family;
+$title-font-family: $gentium-font-family;
 
 @import url(http://fonts.googleapis.com/css?family=Noticia+Text:400,400italic,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic);
 
 a img, img a {
     border: none; 
