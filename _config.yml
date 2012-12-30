@@ -28,3 +28,16 @@ facebook:
 
 twitter: 
   id: scharan
+
+asset_bundler:
+  compress:
+    js: false #yui-compressor -o :outfile :infile
+    css: false #yui-compressor -o :outfile :infile
+  base_path: /css/
+  server_url:
+  remove_bundled: false
+  dev: false
+  markup_templates:
+    js: "<script async type='text/javascript' src='{{url}}'></script>\n"
+    css: "<link rel='stylesheet' type='text/css' href='{{url}}' />\n"
+

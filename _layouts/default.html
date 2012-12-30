@@ -9,22 +9,23 @@
 
    <title>{{ page.title }}</title>
 
-   <link href="http://{{site.domain}}/atom.xml" rel="alternate" title="{{site.title}}" type="application/atom+xml" />
+   <link href="http://{{site.domain}}/atom.xml" rel="alternate" title="RSS - {{site.title}}" type="application/atom+xml" />
    <link rel="stylesheet" href="/css/munich.css" type="text/css" media="screen, projection" />
    <!--[if IE]>
        <link rel="stylesheet" href="/css/ie.css" type="text/css" />
        <![endif]-->
-   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml"/>
    <link rel="Shortcut Icon" type="image/png" href="/favicon.gif" />
 
    <!-- Start: Sai Charan's customizations -->
-   <link rel="stylesheet" type="text/css" href="https://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css" />
-   <link rel="stylesheet" type="text/css" href="https://google-code-prettify.googlecode.com/svn/trunk/styles/sunburst.css" />
-   <script async type="text/javascript" language="javascript" src="https://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
-   <script async type="text/javascript" language="javascript" src="https://google-code-prettify.googlecode.com/svn/trunk/src/lang-css.js"></script>
-   <script async type="text/javascript" language="javascript" src="https://raw.github.com/scharan/munich/master/prettify-adapter.js"> </script>
-   <script async type="text/javascript" language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
-   <script async type="text/javascript" language="javascript" src="https://raw.github.com/scharan/munich/master/customize-disqus.js"> </script>
+   {% bundle %}
+   - 'https://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css'
+   - 'https://google-code-prettify.googlecode.com/svn/trunk/styles/sunburst.css'
+   - 'https://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js'
+   - 'https://google-code-prettify.googlecode.com/svn/trunk/src/lang-css.js'
+   - 'https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'
+   - 'https://raw.github.com/scharan/munich/master/prettify-adapter.js'
+   - 'https://raw.github.com/scharan/munich/master/customize-disqus.js'
+   {% endbundle %}
    <!-- End: Sai Charan's customizations -->
    {% include google-analytics.html %}
 </head>

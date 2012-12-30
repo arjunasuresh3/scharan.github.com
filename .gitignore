@@ -3,4 +3,5 @@ _site/
 .~
 *~
 .DS_Store
+_asset_bundler_cache/
 
