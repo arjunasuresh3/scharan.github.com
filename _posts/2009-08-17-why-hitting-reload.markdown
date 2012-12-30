@@ -21,4 +21,5 @@ Now, when you hit the reload button, remember that a part of the page has alread
 If you hit the stop button, however, you will be stuck with a blank page. By hitting stop, you are telling the browser 'dont bother to try and render this page'. By hitting reload, you are still showing interest. Another way to observe progressive rendering is while the page is loading ( the browser shows a blank or a partially rendred page), go to File &gt; Work Offline (in Firefox). You will see the page quickly render the partial page that was succuessfully downloaded. It is a sort of 'best-effort' service.
 
 <strong>Related concept: </strong>Progressive rendering. Jeff Atwood's take on the 'Lost Art of Progressive Rendering': <a href="http://www.codinghorror.com/blog/archives/000444.html">http://www.codinghorror.com/blog/archives/000444.html</a>
+
 This means that browsers don't need to really download the entire page before it can be displayed to the user. But, this depends on how the page has been desinged: <a href="http://www.vbulletin.org/forum/showthread.php?t=161099 " target="_blank">http://www.vbulletin.org/forum/showthread.php?t=161099</a>.
