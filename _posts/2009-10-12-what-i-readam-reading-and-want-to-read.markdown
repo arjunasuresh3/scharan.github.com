@@ -15,12 +15,14 @@ status: publish
 This is a list for my reference. It will be a "live" post and act as my SPOC for reading.
 
 In progress:
+
 - Beautiful Code
 - Code Complete 2
 - The Pragmatic programmer
 - Structure and Interpretation of Computer programs
 
 Done:
+
 - The Lost Symbol
 - The mythical man-month
 - Joel on Software
@@ -28,6 +30,7 @@ Done:
 - make (O'Rielly)
 
 Wishlist:
+
 - Coders at work by Peter Siebel
 - The Innovator's Dilemma
 - Elements of Style
