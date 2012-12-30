@@ -3,16 +3,31 @@
 
 $header-font-family: Georgia;
 $header-font-size: 60px;
-$default-font-family: "Gill Sans", "Gill Sans MT", Verdana, Tahoma, sans-serif;
-$content-font-family: "Lucida Grande", "Lucida Sans Unicode";
-$content-font-mono: normal 13px / 1.6em Consolas, Menlo, Monaco, "Ubuntu Mono", monospace !important; 
-$content-font: normal 13px / 1.6em Verdana, Tahoma, Ubuntu, sans-serif !important;
-$post-font: $content-font;
-$nav-li-a-font-family: $default-font-family;
+
+$default-font-family: Verdana, Tahoma, sans-serif;
+$default-font-size: 12px;
+$default-line-height: 1.6em;
+
+$content-font-family: $default-font-family;
+$content-line-height: $default-line-height;
+$content-font-size: $default-font-size;
+$content-font: normal 13px / 1.6em $default-font-family !important;
+
+$content-font-family-mono: Consolas, Menlo, Monaco, "Ubuntu Mono", monospace;
+$content-font-size-mono: 12px;
+$content-font-mono: normal 13px / 1.6em $content-font-family-mono monospace !important;
+
+$noticia-font-family: "Noticia Text", serif;
+
+$nav-li-a-font-family: $noticia-font-family;
 $nav-li-a-font-size: 12px;
 $nav-li-a-color: #ffbc00;
 $nav-li-a-hover-color: #262626;
 $nav-li-a-hover-background: #ffbc00;
+
+$title-font-family: $noticia-font-family;
+
+@import url(http://fonts.googleapis.com/css?family=Noticia+Text:400,400italic,700,700italic);
 
 a img, img a {
     border: none; 
@@ -167,7 +182,7 @@ span.meta {
     margin: 0 0 80px 0;
     position: relative;
     .ttl a {
-        font-family: ;
+        font-family: $title-font-family;
         font-weight: normal;
         color: #262626;
         font-size: 18px / 1.4em;
@@ -179,7 +194,7 @@ span.meta {
 }
 
 .ttlp {
-    font-family: "Gill Sans", "Gill Sans MT", Verdana, Tahoma, sans-serif;
+    font-family: $title-font-family;
     font-weight: normal;
     color: #262626;
     font-size: 18px / 1.4em;
@@ -200,10 +215,10 @@ span.meta {
 
 .post .body {
     margin: 20px 0 0 0;
-    font-family: $content-font-family;
-    font-size: 11px;
     color: #fff;
-    line-height: 17px;
+    font-family: $content-font-family;
+    font-size: $content-font-size;
+    line-height: $content-line-height;
     a {
         color: #ffbc00;
         text-decoration: none;
@@ -228,7 +243,7 @@ span.meta {
     }
     pre {
         margin: 12px 0 12px 15px;
-        font-size: 10px; 
+        font-size: $content-font-size-mono;
     }
     ul, ol {
         margin: 12px 0 12px 40px; 
@@ -284,7 +299,7 @@ span.meta {
 .quote {
     margin-top: -15px;
     .body {
-        font: normal 13px / 1.6em Verdana, Tahoma, Ubuntu, sans-serif; 
+        font-family: $content-font-family;
     }
     span.icon a {
         top: 0px; 
@@ -500,24 +515,6 @@ ol.notes {
  *
  * Customizations for the Munich Tumblr theme.
  */
-@media screen {
-    @font-face {
-        font-family: 'Lora';
-        font-style: italic;
-        font-weight: normal;
-        src: local("Lora Italic"), local("Lora-Italic"), url('http://themes.googleusercontent.com/static/fonts/lora/v3/wXeMvRh7Gui36p_I04Ex6g.woff') format("woff"); 
-    } 
-}
-
-@media screen {
-    @font-face {
-        font-family: 'Lora';
-        font-style: normal;
-        font-weight: normal;
-        src: local("Lora"), url('http://themes.googleusercontent.com/static/fonts/lora/v3/5-AYViExptypIdFoLKAxTA.woff') format("woff"); 
-    } 
-}
-
 #wrapper {
     min-width: 320px;
     max-width: 1000px;
@@ -559,19 +556,19 @@ p img {
 }
 
 .text .body {
-    font: $content-font;
+    font-family: $content-font-family;
     font-style: normal;
     color: #D6DBDF; 
 }
 
 .link .body {
-    font: $content-font;
+    font-family: $content-font-family;
     font-style: normal;
     color: #D6DBDF; 
 }
 
 .post .source {
-    font: $content-font;
+    font-family: $content-font-family;
 }
 
 .chat ul li {
@@ -590,7 +587,8 @@ span.meta .note {
 }
 
 code {
-    font: $content-font-mono;
+    font-family: $content-font-family-mono;
+    font-size: $content-font-size-mono;
     background-color: rgba(66, 65, 65, 0.62);
     border: 1px solid #4D4D4D;
     border-radius: 3px;
@@ -606,7 +604,7 @@ pre.prettyprint, code.prettyprint {
     padding-left: 3px !important;
     padding-right: 3px !important;
     border: none !important;
-    font: $content-font-mono;
+    font-family: $content-font-family-mono;
     border-radius: 3px !important; 
 }
 
@@ -639,7 +637,7 @@ hr {
         padding-left: 3px;
         padding-right: 3px;
         margin: 0px;
-        font: $content-font-mono;
+        font-family: $content-font-family-mono;
         word-wrap: break-word; 
     } 
 }
@@ -752,7 +750,7 @@ a img {
 
 /* Disqus Customizations */
 #disqus_thread {
-    font: $content-font;
+    font-family: $content-font-family;
     font-style: normal;
     color: #D6DBDF; 
 }
@@ -773,7 +771,7 @@ a img {
 }
 
 .dsq-commenter-name, #dsq-account-dropdown a, #a_comments {
-    font: $content-font;
+    font-family: $content-font-family;
     font-style: normal;
     color: #FFBC00; 
 }
@@ -783,7 +781,7 @@ a img {
 }
 
 #disqus_thread #posts {
-    font: $content-font;
+    font-family: $content-font-family;
     color: #D6DBDF; 
 }
 
@@ -797,7 +795,7 @@ a img {
 }
 
 div.post-content {
-    font: $content-font;
+    font-family: $content-font-family;
     color: #D6DBDF;
     header .name {
         color: #FFBC00 !important; 
@@ -816,7 +814,7 @@ div.post-content {
 }
 
 .gist-it-gist .gist-file .gist-data pre, .gister-gist .gist-file .gist-data pre {
-    font: $content-font-mono;
+    font-family: $content-font-family-mono;
 }
 
 .gist-it-gist .gist-file, .gister-gist .gist-file {
