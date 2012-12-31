@@ -4,7 +4,7 @@
 $noticia-font-family: "Noticia Text", serif;
 $gentium-font-family: "Gentium Book Basic", serif;
 
-$header-font-family: Georgia;
+$header-font-family: $gentium-font-family;
 $header-font-size: 60px;
 
 $default-font-family: $gentium-font-family, serif, Verdana, Tahoma, sans-serif;
@@ -64,7 +64,7 @@ body {
 #header {
     float: left;
     position: relative;
-    top: 90px;
+    top: 80px;
     h1 {
         a {
             display: block;
