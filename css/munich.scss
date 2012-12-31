@@ -20,6 +20,8 @@ $content-font-family-mono: Consolas, Menlo, Monaco, "Ubuntu Mono", monospace;
 $content-font-size-mono: 12px;
 $content-font-mono: normal 13px / 1.6em $content-font-family-mono monospace !important;
 
+$content-text-color: #fff;
+
 $nav-li-a-font-family: $noticia-font-family;
 $nav-li-a-font-size: 12px;
 $nav-li-a-color: #ffbc00;
@@ -261,7 +263,7 @@ span.meta {
         margin-left: 20px;
         border-left: 1px solid #ccc;
         padding-left: 10px;
-        color: #ccc; 
+        color: $content-text-color;
     } 
 }
 
@@ -312,7 +314,7 @@ span.meta {
     .source {
         font-family: $content-font-family;
         font-size: 11px;
-        color: #fff;
+        color: #ccc;
         line-height: 17px;
         font-variant: normal !important; 
     } 
@@ -560,13 +562,13 @@ p img {
 .text .body {
     font-family: $content-font-family;
     font-style: normal;
-    color: #D6DBDF; 
+    color: $content-text-color;
 }
 
 .link .body {
     font-family: $content-font-family;
     font-style: normal;
-    color: #D6DBDF; 
+    color: $content-text-color;
 }
 
 .post .source {
@@ -575,7 +577,7 @@ p img {
 
 .chat ul li {
     font-size: 10px;
-    color: #D6DBDF; 
+    color: $content-text-color;
 }
 
 .twtr-widget {
