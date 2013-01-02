@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: link
+link: http://www.huffingtonpost.com/janell-burley-hofmann/iphone-contract-from-your-mom_b_2372493.html
 title: Wonder without Googling
 tags: 
 - quote
