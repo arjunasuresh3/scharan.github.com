@@ -873,7 +873,7 @@ div.post-content {
     }
     #navigation {
         left: 0px !important;
-        top: 0px !important;
+        top: 10px !important;
     }
     #nav li {
         line-height: normal;
@@ -883,11 +883,14 @@ div.post-content {
         } 
     }
     #header {
-        h1 a {
-            font-size: 28px;
-            &:hover {
-                font-size: 28px; 
-            } 
+        h1 {
+            margin: 0;
+            a {
+                font-size: 28px;
+                &:hover {
+                    font-size: 28px;
+                }
+            }
         }
         div {
             display: none; 
@@ -905,7 +908,7 @@ div.post-content {
         } 
     } 
     #tagline {
-        visibility: hidden;
+        display: none;
     }
 }
 
@@ -944,4 +947,7 @@ div.post-content {
     * {
         word-wrap: break-word; 
     } 
+    #hr-top {
+        padding-top: 20px;
+    }
 }
