@@ -31,7 +31,7 @@ $nav-li-a-hover-background: #ffbc00;
 $title-font-family: $gentium-font-family;
 
 $header-rotate: rotate(0deg);
-$header-top-position: -110px;
+$header-top-position: 0px;
 $header-left-position: 0px;
 
 $navigation-max-width: 100px;
@@ -43,7 +43,7 @@ $navigation-top: 90px;
 $top-width: 100%; /* 80% of wrapper width */
 $header-width: 100%; /* 100% of main-top */
 
-$main-top: -200px; /* 100px; */
+$main-top: 20px; /* 100px; */
 $main-left: 100px; /* normal; */
 
 @import url(http://fonts.googleapis.com/css?family=Noticia+Text:400,400italic,700,700italic);
@@ -76,14 +76,14 @@ body {
 }
 
 #top {
-    margin: 45px 0px 70px 0px;
+    margin: 0px;
 }
 
 #header {
     float: left;
     position: relative;
     width: $header-width;
-    top: 80px;
+    top: 0px;
     h1 {
         a {
             display: block;
@@ -544,7 +544,7 @@ ol.notes {
 }
 
 #top {
-    position: absolute;
+    position: relative;
     width: $top-width;
     top: $header-top-position;
     left: $header-left-position;
@@ -552,8 +552,9 @@ ol.notes {
 
 #main {
     top: $main-top;
-    left: $main-left;
     position: relative; 
+    float: left;
+    left: $main-left;
 }
 
 #bottom {
@@ -734,7 +735,8 @@ ul#nav {
     max-width: $navigation-max-width;
     max-height: $navigation-max-height;
     left: $navigation-left;
-    top: $navigation-top;
+    top: 10px;
+    float: left;
 }
 
 pre code {
@@ -860,6 +862,10 @@ div.post-content {
     }
 }
 
+#hr-top {
+    border-bottom: 3px solid #FFBC00;
+}
+
 /* Smaller screen size customizations. */
 @media (max-width: 520px) {
     #hm {
@@ -867,7 +873,7 @@ div.post-content {
     }
     #navigation {
         left: 0px !important;
-        top: 35px !important;
+        top: 0px !important;
     }
     #nav li {
         line-height: normal;
@@ -888,7 +894,7 @@ div.post-content {
         } 
     }
     #main {
-        top: 55px !important;
+        top: 0px !important;
     }
     .post {
         .ttl a {
@@ -912,9 +918,9 @@ div.post-content {
     #main {
         left: 10px;
         right: 10px;
-        top: 100px;
         float: left;
         max-width: 95%; 
+        top: 0px;
     }
     #header {
         -webkit-transform: none;
@@ -932,8 +938,8 @@ div.post-content {
     }
     #navigation {
         left: -10px;
-        top: 90px; 
-    }
+        top: 0px;
+     }
     /* Force newline on overflow for smaller screens */
     * {
         word-wrap: break-word; 
