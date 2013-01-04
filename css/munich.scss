@@ -30,6 +30,22 @@ $nav-li-a-hover-background: #ffbc00;
 
 $title-font-family: $gentium-font-family;
 
+$header-rotate: rotate(0deg);
+$header-top-position: -110px;
+$header-left-position: 0px;
+
+$navigation-max-width: 100px;
+$navigation-max-height: 100%;
+
+$navigation-left: -25px;
+$navigation-top: 90px;
+
+$top-width: 100%; /* 80% of wrapper width */
+$header-width: 100%; /* 100% of main-top */
+
+$main-top: -200px; /* 100px; */
+$main-left: 100px; /* normal; */
+
 @import url(http://fonts.googleapis.com/css?family=Noticia+Text:400,400italic,700,700italic);
 @import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic);
 
@@ -60,12 +76,13 @@ body {
 }
 
 #top {
-    margin: 45px 0 70px 0; 
+    margin: 45px 0px 70px 0px;
 }
 
 #header {
     float: left;
     position: relative;
+    width: $header-width;
     top: 80px;
     h1 {
         a {
@@ -85,6 +102,7 @@ body {
             } 
         }
         margin: 6px 0 -17px 0; 
+        padding-left: 10px;
     }
     div {
         color: #ffbc00;
@@ -527,13 +545,14 @@ ol.notes {
 
 #top {
     position: absolute;
-    top: 65px;
-    left: -120px; 
+    width: $top-width;
+    top: $header-top-position;
+    left: $header-left-position;
 }
 
 #main {
-    top: 65px;
-    left: 140px;
+    top: $main-top;
+    left: $main-left;
     position: relative; 
 }
 
@@ -694,35 +713,28 @@ p img {
 }
 
 #header {
-    z-index: 2;
-    /* Sometimes, the top of the header is not clickable. This fixes it. */
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
+    z-index: 2; /* Sometimes, the top of the header is not clickable. This fixes it. */
+    -webkit-transform: $header-rotate;
+    -moz-transform: $header-rotate;
+    -o-transform: $header-rotate;
+    -ms-transform: $header-rotate;
 }
 
 .ttl a:hover {
     background: orange; 
 }
 
-#top {
-    height: 100%;
-    width: auto; 
-}
-
 ul#nav {
-    max-width: 100px; 
+    max-width: $navigation-max-width;
 }
 
 #navigation {
-    z-index: 2;
-    /* Sometimes, the top of the header is not clickable. This fixes it. */
+    z-index: 2; /* Sometimes, the top of the header is not clickable. This fixes it. */
     position: relative;
-    max-width: 100px;
-    max-height: 40px;
-    left: 50px;
-    top: 85px; 
+    max-width: $navigation-max-width;
+    max-height: $navigation-max-height;
+    left: $navigation-left;
+    top: $navigation-top;
 }
 
 pre code {
@@ -825,6 +837,29 @@ div.post-content {
     border: none !important; 
 }
 
+#tagline {
+    position: relative;
+    font-style: italic;
+    right: 0px;
+    float: right;
+    padding-right: 10px;
+    font-family: $noticia-font-family;
+    font-size: 12px;
+    color: #FFBC00;
+    top: -1em;
+    a {
+        color: #FFBC00;
+        font-family: $content-font-family;
+        text-decoration: none;
+        font-weight: none;
+        border-color: #FFBC00;
+        border-bottom: 1px dotted;
+        &:hover {
+            border-bottom: 1px solid;
+        }
+    }
+}
+
 /* Smaller screen size customizations. */
 @media (max-width: 520px) {
     #hm {
@@ -832,7 +867,7 @@ div.post-content {
     }
     #navigation {
         left: 0px !important;
-        top: 45px !important; 
+        top: 35px !important;
     }
     #nav li {
         line-height: normal;
@@ -840,9 +875,6 @@ div.post-content {
         a {
             padding: 3px 9px 3px 9px; 
         } 
-    }
-    #top {
-        left: 10px !important; 
     }
     #header {
         h1 a {
@@ -856,7 +888,7 @@ div.post-content {
         } 
     }
     #main {
-        top: 40px !important; 
+        top: 55px !important;
     }
     .post {
         .ttl a {
@@ -866,6 +898,9 @@ div.post-content {
             word-wrap: break-word; 
         } 
     } 
+    #tagline {
+        visibility: hidden;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -890,8 +925,7 @@ div.post-content {
     }
     #top {
         top: 10px;
-        left: 20px;
-        margin: 0; 
+        margin: 0;
     }
     #navigation, ul#nav {
         max-width: 100%; 
