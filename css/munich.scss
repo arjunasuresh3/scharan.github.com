@@ -44,7 +44,8 @@ $top-width: 100%; /* 80% of wrapper width */
 $header-width: 100%; /* 100% of main-top */
 
 $main-top: 20px; /* 100px; */
-$main-left: 100px; /* normal; */
+$main-left: 70px; /* normal; */
+$navigation-padding-right: 30px;
 
 @import url(http://fonts.googleapis.com/css?family=Noticia+Text:400,400italic,700,700italic);
 @import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic);
@@ -737,6 +738,8 @@ ul#nav {
     left: $navigation-left;
     top: 10px;
     float: left;
+    border-right: 1px solid #FFBC00;
+    padding-right: $navigation-padding-right;
 }
 
 pre code {
@@ -938,6 +941,7 @@ div.post-content {
     }
     #navigation, ul#nav {
         max-width: 100%; 
+        border-right: none;
     }
     #navigation {
         left: -10px;
