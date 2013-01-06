@@ -488,6 +488,9 @@ li {
         font-weight: bold;
         text-decoration: none; 
     } 
+    table {
+        margin: 0 auto;
+    }
 }
 
 .text img {
@@ -563,6 +566,7 @@ ol.notes {
     position: relative;
     bottom: 0;
     margin-bottom: 0;
+    padding-bottom: 5em;
     clear: both;
     border: 0;
     a b {
@@ -574,6 +578,8 @@ ol.notes {
 #pagenav {
     position: relative;
     bottom: 0; 
+    padding-bottom: 5em;
+    border-bottom: 1px dotted #FFBC00;
 }
 
 p img {
@@ -740,7 +746,7 @@ ul#nav {
     left: $navigation-left;
     top: 10px;
     float: left;
-    border-right: 1px solid #FFBC00;
+    border-right: 1px dotted #FFBC00;
     padding-right: $navigation-padding-right;
 }
 
