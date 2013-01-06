@@ -877,6 +877,12 @@ div.post-content {
     border-bottom: 1px solid #FFBC00;
 }
 
+#search-bar {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 3em;
+}
+
 /* Smaller screen size customizations. */
 @media (max-width: 520px) {
     #hm {
