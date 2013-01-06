@@ -36,6 +36,7 @@ $header-left-position: 0px;
 
 $navigation-max-width: 100px;
 $navigation-max-height: 100%;
+$navigation-height: 18em;
 
 $navigation-left: -25px;
 $navigation-top: 90px;
@@ -735,6 +736,7 @@ ul#nav {
     position: relative;
     max-width: $navigation-max-width;
     max-height: $navigation-max-height;
+    height: $navigation-height;
     left: $navigation-left;
     top: 10px;
     float: left;
@@ -942,6 +944,7 @@ div.post-content {
     #navigation, ul#nav {
         max-width: 100%; 
         border-right: none;
+        height: auto;
     }
     #navigation {
         left: -10px;
