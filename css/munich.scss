@@ -727,6 +727,7 @@ p img {
     -moz-transform: $header-rotate;
     -o-transform: $header-rotate;
     -ms-transform: $header-rotate;
+    border-bottom: 1px solid #FFBC00;
 }
 
 .ttl a:hover {
