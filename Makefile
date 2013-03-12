@@ -22,3 +22,6 @@ s3:
 aws:
 	sudo jekyll $(AWS_SITE) && sudo rm -f $(AWS_SITE)/makefile
 
+gae:
+	cd ${REPO_DIR} && jekyll && ${HOME}/google_appengine/appcfg.py --oauth2 update _site/
+
