@@ -6,7 +6,6 @@ title: Redirected from blogger
 <div id="blogger-redirect"> Fetching referrer... </div>
 
 <script type="text/javascript">
-
 //---------------------------------------------
 // Levenshtein Distance: http://stackoverflow.com/a/11958496/162471
 var levDist = function(s, t) {
@@ -68,6 +67,11 @@ var createAnchorHtml = function(obj) {
 //---------------------------------------------
 $(document).ready( function() {
     var ref = document.referrer;
+    if(ref == "http://blogger.saicharan.in/") {
+      document.location = '/';
+      return;
+    }
+
     var parts = ref.split('/');
   
     // URL format: http://blogger.saicharan.in/2009/03/viewvc-integration-with-google-prettify.html
@@ -89,11 +93,25 @@ $(document).ready( function() {
           levUrl = createAnchorHtml($(this));
         }
       });
-    $('#blogger-redirect').html('Redirecting you to: ' + levUrl);
-    document.location = $(levUrl).attr('href');
-    });
+
+      if(levNum < 5) {
+        $('#blogger-redirect').html('Redirecting you to: ' + levUrl);
+        document.location = $(levUrl).attr('href')
+      } else { // If Levenshtein distance is >5, probably something wrong.
+        $.get(monthListing, function(data) {
+          var page = $(data);
+          var content = 'Oopsie! Looks like we made a booboo :(. Please select the relevant link or search for it below.<br /><ul>';
+          $('div.post > ul > li > a', page).each( function(index) {
+            content += '<li>' + createAnchorHtml($(this)) + '</li><br />';
+          });
+          content += '</ul>';
+          $('#blogger-redirect').html(content);
+        });
+     }
+   });
 });
 </script>
 
+{% include search.html %}
 <div id="no-disqus"> </div>
 
