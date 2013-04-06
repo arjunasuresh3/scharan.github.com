@@ -67,7 +67,10 @@ var createAnchorHtml = function(obj) {
 //---------------------------------------------
 $(document).ready( function() {
     var ref = document.referrer;
-    if(ref == "http://blogger.saicharan.in/") {
+    if(ref == "" || ref == null || ref == undefined) {
+      $('#blogger-redirect').html('Oopsie! Something unexpected happened: I did not find your referrer. Please search below once again for what you were looking for.');
+      return;
+    } else if(ref == "http://blogger.saicharan.in/") {
       document.location = '/';
       return;
     }
