@@ -22,7 +22,11 @@ These tools are used to write, publish and serve the present site &mdash;
 - Static files hosted on Google's [App Engine](https://developers.google.com/appengine/).
     * Previously: Static files hosted on [Amazon's S3](https://aws.amazon.com/s3).
     * Previously: [Nettigritty's](http://nettigritty.com) servers &mdash; they are a fantastic, affordable [domain registrar](http://domains.nettigritty.com/) and [hosting provider](http://www.nettigritty.com/linuxwebhosting.php). You should try them!
-- Apache webserver.
+    * Previously: Apache webserver.
+- DNS on Amazon's [Route 53](https://aws.amazon.com/route53/):
+    * Previously: [Gandi.net's DNS](http://wiki.gandi.net/en/domains/management/using-gandi-dns) servers.
+    * Previously: [Nettigritty's DNS](http://domains.nettigritty.com/content.php?action=free_services) servers.
+- [Gandi.net](https://www.gandi.net/) as domain registrar.
 - [Github](https://github.com/scharan/munich) & [Google Code](http://code.google.com/) as CDNs.
 - Comments are served out by [Disqus](http://disqus.com).
 - Syntax highlighting by the [Google Code hosted 'Prettify'](http://code.google.com/p/google-code-prettify/) JS library.

@@ -10,9 +10,9 @@ function toggleComments() {
         d.style['display'] = 'none';
         a.innerHTML='Show Comments ▾';
     }
-    return true;
+    return false;
 }
 </script>
 
-<a id="a_comments" href="#" onclick="javascript:toggleComments()">Show Comments ▾</a>
+<a id="a_comments" href="#" onclick="javascript:toggleComments(); return false;">Show Comments ▾</a>
 
