@@ -13,6 +13,11 @@ handlers:
   static_files: \1
   upload: (.*\.(gif|png|jpg|ico|js|css|asc|html|txt|textile|xml))
 
+# http://stackoverflow.com/a/6566464/162471
+- url: /(.*)/
+  static_files: \1/index.html
+  upload: .*/index\.html
+
 - url: /robots.txt
   static_files: robots.txt
   upload: robots.txt 

@@ -88,7 +88,7 @@ function cleanUrl(url) {
 //---------------------------------------------
 // Add this tag into the <head> section: <meta expr:content='"0;url=http://saicharan.in/blog/blogger-redirect.html?from="+data:blog.url' http-equiv='refresh'/>
 $(document).ready( function() {
-    var ref = cleanUrl(document.referer || getQueryStringParams('from'));
+    var ref = document.referer || getQueryStringParams('from');
     if(ref == "http://blogger.saicharan.in/") {
       document.location = '/';
       return;
@@ -97,13 +97,14 @@ $(document).ready( function() {
       return;
     }
 
-    var parts = ref.split('/');
+    // ref is now defined and non-empty.
+    var parts = cleanUrl(ref).split('/');
   
     // Blogger URL format: http://blogger.saicharan.in/2009/03/viewvc-integration-with-google-prettify.html
-    // Jekyll URL format: http://www.saicharan.in/blog/2009/03/19/cvs-viewvc-integration-with-google-prettify/
     var year = parts[3];
     var month = parts[4];
     
+    // Jekyll URL format: http://www.saicharan.in/blog/2009/03/19/cvs-viewvc-integration-with-google-prettify/
     var monthListing = '/blog/' + year + '/' + month + '/';
     $('#blogger-redirect').text("Analyzing referrer URL...");
     $.get(monthListing, function(data) {

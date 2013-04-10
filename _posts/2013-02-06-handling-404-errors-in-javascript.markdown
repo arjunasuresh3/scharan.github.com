@@ -8,7 +8,7 @@ tags:
 date: 2013-02-06 08:41:54
 ---
 
-[Migrating](/blog/colophon.html) between hosting and blogging solutions can cause headaches. Now that I've moved to an Amazon S3 hosted [static website](/blog/2011/08/24/static-blog-using-jekyll/), I needed and intelligent way to handle certain features like tags and categories that I had with the blogger.com and Wordpress hosted site, _**without**_ the need to host a server.
+[Migrating](/blog/colophon.html) between hosting and blogging solutions can cause headaches. Now that I've moved to an Amazon S3 hosted [static website](/blog/2011/08/24/static-blog-using-jekyll/), I needed an intelligent way to handle certain features like tags and categories that I had with the blogger.com and Wordpress hosted site, _**without**_ the need to host a server.
 
 JavaScript to the [rescue](https://github.com/scharan/scharan.github.com/blob/master/_includes/error.html)! 
 
