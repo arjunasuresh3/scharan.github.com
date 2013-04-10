@@ -78,9 +78,17 @@ function getQueryStringParams(sParam) {
 }
 
 //---------------------------------------------
+// On mobile, blogger appends ?m=1 to the URL as in: http://blogger.saicharan.in/2009/03/viewvc-integration-with-google-prettify.html?m=1
+// So, the URL to redirect will be: http://www.saicharan.in/blog/blogger-redirect.html?from=blogger.saicharan.in/2009/03/viewvc-integration-with-google-prettify.html?m=1
+// This function naively cleans such URLs. Blogger could have been more intelligent when appending query params.
+function cleanUrl(url) {
+    return url.split('&')[0];
+}
+
+//---------------------------------------------
 // Add this tag into the <head> section: <meta expr:content='"0;url=http://saicharan.in/blog/blogger-redirect.html?from="+data:blog.url' http-equiv='refresh'/>
 $(document).ready( function() {
-    var ref = document.referrer || getQueryStringParams('from');
+    var ref = cleanUrl(document.referer || getQueryStringParams('from'));
     if(ref == "http://blogger.saicharan.in/") {
       document.location = '/';
       return;
@@ -91,7 +99,8 @@ $(document).ready( function() {
 
     var parts = ref.split('/');
   
-    // URL format: http://blogger.saicharan.in/2009/03/viewvc-integration-with-google-prettify.html
+    // Blogger URL format: http://blogger.saicharan.in/2009/03/viewvc-integration-with-google-prettify.html
+    // Jekyll URL format: http://www.saicharan.in/blog/2009/03/19/cvs-viewvc-integration-with-google-prettify/
     var year = parts[3];
     var month = parts[4];
     
