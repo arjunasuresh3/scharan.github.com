@@ -65,13 +65,27 @@ var createAnchorHtml = function(obj) {
 }
 
 //---------------------------------------------
+//source: http://jquerybyexample.blogspot.com/2012/05/how-to-get-querystring-value-using.html
+function getQueryStringParams(sParam) {
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) {
+            return sParameterName[1];
+        }
+    }
+}
+
+//---------------------------------------------
+// Add this tag into the <head> section: <meta expr:content='"0;url=http://saicharan.in/blog/blogger-redirect.html?from="+data:blog.url' http-equiv='refresh'/>
 $(document).ready( function() {
-    var ref = document.referrer;
-    if(ref == "" || ref == null || ref == undefined) {
-      $('#blogger-redirect').html('Oopsie! Something unexpected happened: I did not find your referrer. Please search below once again for what you were looking for.');
-      return;
-    } else if(ref == "http://blogger.saicharan.in/") {
+    var ref = document.referrer || getQueryStringParams('from');
+    if(ref == "http://blogger.saicharan.in/") {
       document.location = '/';
+      return;
+    } else if(ref == "" || ref == null || ref == undefined) {
+      $('#blogger-redirect').html('Oopsie! Something unexpected happened: I could not know where you came from. Please search below once again for what you were looking for.');
       return;
     }
 
