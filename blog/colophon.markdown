@@ -19,7 +19,8 @@ These tools are used to write, publish and serve the present site &mdash;
 - [FTPSync](http://sourceforge.net/projects/ftpsync/) for incremental push to live site.
 
 #### Server
-- Static files hosted on [Amazon's S3](https://aws.amazon.com/s3). 
+- Static files hosted on Google's [App Engine](https://developers.google.com/appengine/).
+    * Previously: Static files hosted on [Amazon's S3](https://aws.amazon.com/s3).
     * Previously: [Nettigritty's](http://nettigritty.com) servers &mdash; they are a fantastic, affordable [domain registrar](http://domains.nettigritty.com/) and [hosting provider](http://www.nettigritty.com/linuxwebhosting.php). You should try them!
 - Apache webserver.
 - [Github](https://github.com/scharan/munich) & [Google Code](http://code.google.com/) as CDNs.
