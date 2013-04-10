@@ -21,7 +21,8 @@ However, since the blogger hosted site still got a lot of traffic from search, I
 To deal with these two and also handle correct redirects automatically, here is my quick solution:
 
 - On the blogger.com hosted website, place a redirect to a special page to handle redirects from blogger (in this case, /blog/blogger-redirect.html).
-- This special page first detects the '[referrer](http://en.wikipedia.org/wiki/HTTP_referer)', then extracts the year, month and slug from the blogger URL.
+      <meta expr:content='"0;url=http://saicharan.in/blog/blogger-redirect.html?from="+data:blog.url' http-equiv='refresh'/>
+- This special page first detects the '[referer](http://en.wikipedia.org/wiki/HTTP_referer)', then extracts the year, month and slug from the blogger URL. If the referer is not found, extract the query parameter `from`. This is a minor optimization in case referer is set (eg. with Google Chrome); one could simply always use the query parameter method (IE and Firefox seem to remove `referer`).
 - It then lists the URLs on the month-page (eg. /blog/YYYY/MM/) of this website, and computes the _[Levenshtein's distance](http://en.wikipedia.org/wiki/Levenshtein_distance)_ between the blogger-slug from the blogger URL and the slugs from the month-page URLs.
 - If the minimum amongst the computed Levenshtein distances is less than 5, automatically redirect to the URL with that minimal Levenshtein distance ([example](http://blogger.saicharan.in/2009/03/viewvc-integration-with-google-prettify.html)).
 - If not, admit that we made a booboo and list all pages for that month, and additionally providing the search box ([example](http://blogger.saicharan.in/2007/01/this-is-test-post-from-google-docs.html)).
