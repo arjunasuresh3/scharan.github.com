@@ -3,7 +3,7 @@ layout: page
 title: Colophon
 ---
 
-Historically, this site was first built on [Blogger](http://sricharan-log.blogspot.com). Next, it ran off a self-hosted [Wordpress](http://wordpress.org) installation off [Nettigritty's](http://nettigritty.com). Currently, this site is registered with [Gandi.net](http://gandi.net) & served off [Amazon's S3](https://aws.amazon.com/s3).
+Historically, this site was first built on [Blogger](http://sricharan-log.blogspot.com). Next, it ran off a self-hosted [Wordpress](http://wordpress.org) installation off [Nettigritty's](http://nettigritty.com). Currently, this site is registered with [Gandi.net](http://gandi.net) & served off ~~[Amazon's S3](https://aws.amazon.com/s3)~~ Google's [App Engine](https://developers.google.com/appengine/).
 
 These tools are used to write, publish and serve the present site &mdash;
 
