@@ -4,6 +4,10 @@ runtime: python27
 api_version: 1
 threadsafe: no
 
+# http://stackoverflow.com/a/3722135/162471
+error_handlers:
+- file: /404.html
+
 handlers:
 - url: /
   static_files: index.html
@@ -21,6 +25,10 @@ handlers:
 - url: /robots.txt
   static_files: robots.txt
   upload: robots.txt 
+
+- url: /.*
+  static_files: 404.html
+  upload: 404.html
 
 #- url: .*
 #  script: main.py

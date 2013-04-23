@@ -1,6 +1,8 @@
 <div id="page-not-found"> Analyzing error... </div>
 
 <script type="text/javascript">
+{% include blogger-redirect.js %}
+
 $(document).ready( function() {
     var url = $(location).attr('href');
     if( !url.match(/\/$/) ) { // Need this simplification to end URLs with '/'
@@ -17,6 +19,8 @@ $(document).ready( function() {
             go('/page'+mat.reverse()[0]);
         } else if ( (mat = url.match( tagUrl )) || (mat = url.match( catUrl )) ) {
            go('{{site.folder}}/tags.html#'+mat.reverse()[0].replace(/-/,' ')); // Handles a few pathological cases
+        } else {
+          handleBloggerUrl(url, 'page-not-found');
         }
     return 0; // Failed to handle. Report.
     }
