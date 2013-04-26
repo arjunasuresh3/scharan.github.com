@@ -5,6 +5,7 @@
 
 $(document).ready( function() {
     var url = $(location).attr('href');
+    $.ajax('http://sai-track.appspot.com/track/notfound?url='+url);
     if( !url.match(/\/$/) ) { // Need this simplification to end URLs with '/'
         url += '/';           // to simplify RegExp handling below, which assumes
     }                         // that the wrong URLs will end in '/'

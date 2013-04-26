@@ -7,7 +7,11 @@ title: Redirected from blogger
 
 <script type="text/javascript">
 {% include blogger-redirect.js %}
-$(document).ready( handleBloggerUrl( document.referer || getQueryStringParams('from'), 'blogger-redirect' ) );
+$(document).ready( function() {
+  var url = document.referer || getQueryStringParams('from');
+  $.ajax('http://sai-track.appspot.com/track/redirect?url='+url);
+  handleBloggerUrl( url, 'blogger-redirect' );
+});
 </script>
 
 {% include search.html %}
