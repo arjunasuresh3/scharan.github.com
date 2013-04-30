@@ -104,7 +104,7 @@ function handleBloggerUrl(ref, messageDivId) {
     
     // Jekyll URL format: http://www.saicharan.in/blog/2009/03/19/cvs-viewvc-integration-with-google-prettify/
     var monthListing = '/blog/' + year + '/' + month + '/';
-    $('#'+messageDivId).text("Analyzing referrer URL...");
+    $('#'+messageDivId).text("Finding the right page...");
     $.get(monthListing, function(data) {
       var page = $(data);
       var levNum = 65534; // Very large number
@@ -120,19 +120,19 @@ function handleBloggerUrl(ref, messageDivId) {
       });
 
       if(levNum < 5) {
-        $('#'+messageDivId).html('Redirecting you to: ' + levUrl);
-        document.location = $(levUrl).attr('href')
+          $('#'+messageDivId).html('Redirecting you to: ' + levUrl + '. If not redirected, please click on the link.');
+          document.location = $(levUrl).attr('href');
       } else { // If Levenshtein distance is >5, probably something wrong.
-        $.get(monthListing, function(data) {
-          var page = $(data);
-          var content = 'Oopsie! Looks like we made a booboo :(. Please select the relevant link or search for it below.<br /><ul>';
-          $('div.post > ul > li > a', page).each( function(index) {
-            content += '<li>' + createAnchorHtml($(this)) + '</li><br />';
+          $.get(monthListing, function(data) {
+              var page = $(data);
+              var content = 'Oopsie! Looks like we made a booboo :(. Please select the relevant link or search for it below.<br /><ul>';
+              $('div.post > ul > li > a', page).each( function(index) {
+                  content += '<li>' + createAnchorHtml($(this)) + '</li><br />';
+              });
+              content += '</ul>';
+              $('#'+messageDivId).html(content);
           });
-          content += '</ul>';
-          $('#'+messageDivId).html(content);
-        });
-     }
-   });
+      }
+    });
 }
 
