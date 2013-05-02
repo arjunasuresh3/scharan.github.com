@@ -17,3 +17,5 @@ GAE's [instructions](https://developers.google.com/appengine/docs/domain) on usi
     We are unable to process your request at this time. Please try again later. (Error #1000)
 After a bit of searching and experimenting, _*only*_ [this]( https://code.google.com/p/googleappengine/issues/detail?id=5021#c13) apparently silly technique actually worked. Along with [naked domain redirection](https://support.google.com/a/bin/answer.py?hl=en&answer=2518373), this is now a static site, fully hosted on Google App Engine. Even though this runs off GAE, there are zero machine instances running. This can be verified in the [app.yaml](https://github.com/scharan/scharan.github.com/blob/master/app.yaml) not relying on any executable script.
 
+_*Update*_: GAE does not currently support [custom 404](http://stackoverflow.com/q/14340373/162471) handlers. So, until then, back to Amazon S3 hosting.
+
