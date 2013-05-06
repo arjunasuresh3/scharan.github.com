@@ -1,4 +1,4 @@
-JEKYLL_CMD = /var/lib/gems/1.8/bin/jekyll
+JEKYLL_CMD = /usr/local/bin/jekyll
 REPO_DIR = ~/scharan.github.com
 GH_SITE = ~/scharan.github.com
 AWS_SITE = /var/www/html
@@ -14,14 +14,14 @@ all:
 	cd $(REPO_DIR) && jekyll
 
 cse:
-	sudo $(JEKYLL_CMD) $(CSE_SITE) && sudo rm -f $(CSE_SITE)/makefile
+	sudo $(JEKYLL_CMD) build --destination $(CSE_SITE) && sudo rm -f $(CSE_SITE)/makefile
 
 s3:
-	cd $(REPO_DIR) && jekyll _site/ && $(SYNC_CMD) 
+	cd $(REPO_DIR) && $(JEKYLL_CMD) build --destination _site/ && $(SYNC_CMD) 
 
 aws:
-	sudo jekyll $(AWS_SITE) && sudo rm -f $(AWS_SITE)/makefile
+	sudo $(JEKYLL_CMD) --destination $(AWS_SITE) && sudo rm -f $(AWS_SITE)/makefile
 
 gae:
-	cd ${REPO_DIR} && jekyll && ${HOME}/google_appengine/appcfg.py --oauth2 update _site/
+	cd ${REPO_DIR} && $(JEKYLL_CMD) build --destination _site/ && ${HOME}/google_appengine/appcfg.py --oauth2 update _site/
 

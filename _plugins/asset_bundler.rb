@@ -3,6 +3,7 @@
 #
 # Author : Colin Kennedy
 # Repo   : http://github.com/moshen/jekyll-asset_bundler
+# Version: 0.10
 # License: MIT, see LICENSE file
 #
 
@@ -193,7 +194,9 @@ END
           ret_config['dev'] = context.registers[:site].config["dev"] ? true : false
         end
 
-        if context.registers[:site].config['server']
+        # Jekyll version 1.0 will change server to serving
+        # TODO: Simplify this when Jekyll v1 is released
+        if context.registers[:site].config['server'] || context.registers[:site].config['serving']
           ret_config['dev'] = true
         end
 
@@ -247,8 +250,14 @@ END
     end
 
     def cache_dir()
-      cache_dir = File.expand_path( "../_asset_bundler_cache",
-                                    @context.registers[:site].plugins )
+	    plugin_conf = @context.registers[:site].plugins
+			# Hack for jekyll versions before 0.12.0
+			if plugin_conf.kind_of?(Array)
+			  plugin_dir = plugin_conf.first
+		  else
+		    plugin_dir = plugin_conf
+		  end
+      cache_dir = File.expand_path( "../_asset_bundler_cache", plugin_dir)
       if( !File.directory?(cache_dir) )
         FileUtils.mkdir_p(cache_dir)
       end
